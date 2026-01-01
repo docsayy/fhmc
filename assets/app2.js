@@ -1,38 +1,11 @@
 // assets/app2.js
-// Directory + Paging (Cloudflare Worker) — complete file
-// Requires in index2.html:
-//   <div id="status"></div>
-//   <input id="search" ...>
-//   <div id="content"></div>
-//
-// Data file:
-//   ./assets/data/directory2.json  (must be a JSON array of entries)
-//
-// Entry shape supported:
-//   {
-//     "category": "Radiology — Radiologists (Onsite)",
-//     "name": "Dr Arnuk",
-//     "call": ["7182066955"],          // optional
-//     "fax": ["..."],                  // optional (not used)
-//     "pager": "11171" | null,         // optional; if present shows Page button
-//     "notes": "Onsite (ext 7753)"     // optional
-//   }
-
-(() => {
+(async () => {
   // =========================
-  // CONFIG — EDIT THESE
+  // CONFIG
   // =========================
   const DATA_URL = "./assets/data/directory2.json";
-
-  // Cloudflare Worker endpoint that accepts JSON: { pager, message, fromName }
-  // Example: "https://fhmc-pager.yourname.workers.dev/page"
-  const WORKER_URL = "https://fhmc-pager.msayan92.workers.dev/";
-
-  // If you set env.PAGER_SHARED_TOKEN in the worker, put the same value here.
-  // Otherwise leave "".
-  const SHARED_TOKEN = "";
-
-  // Sender name for the page
+  const WORKER_URL = "https://fhmc-pager.msayan92.workers.dev"; // root is fine
+  const SHARED_TOKEN = ""; // only if env.PAGER_SHARED_TOKEN is set
   const FROM_NAME = "FHMC Directory";
 
   // =========================
@@ -48,15 +21,10 @@
   }
 
   // =========================
-  // State
+  // Helpers
   // =========================
-  let all = [];
-  let filtered = [];
-  let q = "";
-
-  // =========================
-  // Utils
-  // =========================
+  const digitsOnly = (v) => String(v ?? "").replace(/\D/g, "");
+  const norm = (s) => String(s ?? "").toLowerCase().trim();
   const escapeHtml = (s) =>
     String(s ?? "")
       .replace(/&/g, "&amp;")
@@ -65,13 +33,10 @@
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 
-  const digitsOnly = (v) => String(v ?? "").replace(/\D/g, "");
-  const norm = (s) => String(s ?? "").toLowerCase().trim();
-
   function formatPhone(d) {
     const x = digitsOnly(d);
     if (x.length === 10) return `(${x.slice(0, 3)}) ${x.slice(3, 6)}-${x.slice(6)}`;
-    return d;
+    return String(d || "");
   }
 
   function telHref(d) {
@@ -85,6 +50,7 @@
       entry.category,
       entry.name,
       (entry.call || []).join(" "),
+      (entry.fax || []).join(" "),
       entry.pager ?? "",
       entry.notes ?? "",
     ]
@@ -94,17 +60,29 @@
   }
 
   // =========================
-  // Paging backend call
+  // Toast (uses your .toast)
   // =========================
-  async function sendPageToCloudflare({ pager, message, fromName }) {
-    if (!WORKER_URL || WORKER_URL.includes("YOUR-WORKER-DOMAIN")) {
-      throw new Error("WORKER_URL not set in app2.js");
+  const toastEl = document.querySelector(".toast");
+  function toast(msg, ms = 2600) {
+    if (!toastEl) {
+      status.textContent = msg;
+      return;
     }
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    setTimeout(() => toastEl.classList.remove("show"), ms);
+  }
+
+  // =========================
+  // Cloudflare paging (matches your Worker body: {pager, message, fromName})
+  // =========================
+  async function sendPageToWorker({ pager, message }) {
+    if (!WORKER_URL) throw new Error("WORKER_URL missing in app2.js");
 
     const payload = {
       pager: String(pager || ""),
       message: String(message || ""),
-      fromName: fromName || FROM_NAME,
+      fromName: FROM_NAME,
     };
 
     const headers = { "Content-Type": "application/json" };
@@ -118,12 +96,12 @@
 
     const text = await res.text();
 
-    // Worker should return JSON like {ok:true} / {ok:false,error:"..."}
-    let json;
+    // Worker might return JSON (recommended) or plain text (your older version)
+    let json = null;
     try {
       json = JSON.parse(text);
     } catch {
-      // If worker returned plain text, surface it
+      // plain text mode
       if (!res.ok) throw new Error(text || `HTTP ${res.status}`);
       return { ok: true, raw: text };
     }
@@ -131,139 +109,150 @@
     if (!res.ok || !json.ok) {
       throw new Error(json.error || `HTTP ${res.status}`);
     }
-
     return json;
   }
 
   // =========================
-  // Modal UI (created dynamically)
+  // Modal (message only, styled to match your dark theme)
   // =========================
   const modal = (() => {
     const overlay = document.createElement("div");
     overlay.id = "pageModalOverlay";
     overlay.style.cssText = `
-      position: fixed; inset: 0; background: rgba(0,0,0,.45);
-      display: none; align-items: center; justify-content: center;
-      padding: 16px; z-index: 9999;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      z-index: 9999;
     `;
 
     const card = document.createElement("div");
     card.style.cssText = `
-      width: min(520px, 100%);
-      background: #fff; border-radius: 14px;
-      box-shadow: 0 12px 40px rgba(0,0,0,.25);
+      width: min(560px, 100%);
+      background: #0f1620;
+      color: #e9eef5;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.45);
       overflow: hidden;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     `;
 
     const header = document.createElement("div");
     header.style.cssText = `
-      padding: 14px 16px; border-bottom: 1px solid #eee;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 12px;
+      background: rgba(255,255,255,.03);
+      border-bottom: 1px solid rgba(255,255,255,.08);
     `;
 
     const title = document.createElement("div");
-    title.style.cssText = `font-weight: 700; font-size: 16px;`;
+    title.style.cssText = "font-weight: 900; font-size: 14px;";
     title.textContent = "Send Page";
 
     const closeBtn = document.createElement("button");
     closeBtn.type = "button";
     closeBtn.textContent = "✕";
-    closeBtn.setAttribute("aria-label", "Close");
     closeBtn.style.cssText = `
-      border: none; background: transparent; cursor: pointer;
-      font-size: 18px; line-height: 1; padding: 8px; border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: #fff;
+      border-radius: 10px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-weight: 900;
+      line-height: 1;
     `;
-    closeBtn.onmouseenter = () => (closeBtn.style.background = "#f3f3f3");
-    closeBtn.onmouseleave = () => (closeBtn.style.background = "transparent");
 
     header.appendChild(title);
     header.appendChild(closeBtn);
 
     const body = document.createElement("div");
-    body.style.cssText = `padding: 14px 16px; display: grid; gap: 10px;`;
+    body.style.cssText = "padding: 12px; display: grid; gap: 10px;";
 
     const meta = document.createElement("div");
-    meta.style.cssText = `font-size: 13px; color: #444;`;
-    meta.innerHTML = `<div><b>To:</b> <span id="pmTo"></span></div>`;
+    meta.id = "pmTo";
+    meta.style.cssText = "font-size: 13px; opacity: .85;";
 
-    const cbLabel = document.createElement("label");
-    cbLabel.style.cssText = `display: grid; gap: 6px; font-size: 13px; color: #222;`;
-    cbLabel.innerHTML = `<span>Callback extension/number (optional)</span>`;
-
-    const cbInput = document.createElement("input");
-    cbInput.id = "pmCallback";
-    cbInput.type = "text";
-    cbInput.placeholder = "e.g., 5559 or 718-xxx-xxxx";
-    cbInput.style.cssText = `
-      width: 100%; padding: 10px 12px; border-radius: 12px;
-      border: 1px solid #ddd; outline: none; font-size: 14px;
+    const textarea = document.createElement("textarea");
+    textarea.id = "pmMessage";
+    textarea.rows = 5;
+    textarea.placeholder = "Type message…";
+    textarea.style.cssText = `
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.05);
+      color: #fff;
+      outline: none;
+      resize: vertical;
+      font-size: 14px;
+      box-sizing: border-box;
     `;
-    cbInput.onfocus = () => (cbInput.style.borderColor = "#999");
-    cbInput.onblur = () => (cbInput.style.borderColor = "#ddd");
-    cbLabel.appendChild(cbInput);
-
-    const msgLabel = document.createElement("label");
-    msgLabel.style.cssText = `display: grid; gap: 6px; font-size: 13px; color: #222;`;
-    msgLabel.innerHTML = `<span>Message</span>`;
-
-    const msgArea = document.createElement("textarea");
-    msgArea.id = "pmMessage";
-    msgArea.rows = 4;
-    msgArea.placeholder = "Type message…";
-    msgArea.style.cssText = `
-      width: 100%; padding: 10px 12px; border-radius: 12px;
-      border: 1px solid #ddd; outline: none; font-size: 14px; resize: vertical;
-    `;
-    msgArea.onfocus = () => (msgArea.style.borderColor = "#999");
-    msgArea.onblur = () => (msgArea.style.borderColor = "#ddd");
-    msgLabel.appendChild(msgArea);
 
     const footer = document.createElement("div");
     footer.style.cssText = `
-      padding: 12px 16px; border-top: 1px solid #eee;
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
     `;
 
     const pmStatus = document.createElement("div");
     pmStatus.id = "pmStatus";
-    pmStatus.style.cssText = `font-size: 13px; color: #444;`;
+    pmStatus.style.cssText = "font-size: 13px; opacity: .85;";
 
-    const actions = document.createElement("div");
-    actions.style.cssText = `display: flex; gap: 10px;`;
+    const btns = document.createElement("div");
+    btns.style.cssText = "display: flex; gap: 10px;";
 
-    const cancel = document.createElement("button");
-    cancel.type = "button";
-    cancel.textContent = "Cancel";
-    cancel.style.cssText = `
-      padding: 10px 12px; border-radius: 12px;
-      border: 1px solid #ddd; background: #fff; cursor: pointer; font-weight: 600;
+    const cancelBtn = document.createElement("button");
+    cancelBtn.type = "button";
+    cancelBtn.textContent = "Cancel";
+    cancelBtn.style.cssText = `
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      color: #fff;
+      border-radius: 12px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 13px;
     `;
 
-    const send = document.createElement("button");
-    send.type = "button";
-    send.textContent = "Send";
-    send.style.cssText = `
-      padding: 10px 14px; border-radius: 12px;
-      border: 1px solid #111; background: #111; color: #fff;
-      cursor: pointer; font-weight: 700;
+    const sendBtn = document.createElement("button");
+    sendBtn.type = "button";
+    sendBtn.textContent = "Send";
+    sendBtn.style.cssText = `
+      border: 1px solid rgba(160,255,180,.35);
+      background: rgba(160,255,180,.14);
+      color: #e9fff0;
+      border-radius: 12px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: 950;
+      font-size: 13px;
     `;
 
-    actions.appendChild(cancel);
-    actions.appendChild(send);
+    btns.appendChild(cancelBtn);
+    btns.appendChild(sendBtn);
 
     footer.appendChild(pmStatus);
-    footer.appendChild(actions);
+    footer.appendChild(btns);
 
     body.appendChild(meta);
-    body.appendChild(cbLabel);
-    body.appendChild(msgLabel);
+    body.appendChild(textarea);
 
     card.appendChild(header);
     card.appendChild(body);
     card.appendChild(footer);
-
     overlay.appendChild(card);
     document.body.appendChild(overlay);
 
@@ -271,171 +260,137 @@
 
     function open({ name, pager }) {
       current = { name: name || "Recipient", pager: digitsOnly(pager) };
-      document.getElementById("pmTo").textContent = `${name || ""} (pager ${current.pager})`;
+      meta.textContent = `To: ${current.name} (pager ${current.pager})`;
       pmStatus.textContent = "";
-      cbInput.value = "";
-      msgArea.value = "";
+      textarea.value = "";
       overlay.style.display = "flex";
-      setTimeout(() => msgArea.focus(), 0);
+      setTimeout(() => textarea.focus(), 0);
     }
 
     function close() {
       overlay.style.display = "none";
     }
 
-    async function doSend() {
+    async function send() {
       const pager = current.pager;
-      const cb = cbInput.value.trim();
-      const msg = msgArea.value.trim();
+      const msg = textarea.value.trim();
 
-      const parts = [];
-      if (cb) parts.push(`Callback: ${cb}`);
-      if (msg) parts.push(msg);
-      const finalMsg = parts.join("\n").trim();
-
-      if (!pager) {
-        pmStatus.textContent = "Missing pager.";
-        return;
-      }
-      if (!finalMsg) {
-        pmStatus.textContent = "Message is empty.";
-        return;
-      }
+      if (!pager) return (pmStatus.textContent = "Missing pager.");
+      if (!msg) return (pmStatus.textContent = "Message required.");
 
       try {
         pmStatus.textContent = "Sending…";
-        send.disabled = true;
-        cancel.disabled = true;
+        sendBtn.disabled = true;
+        cancelBtn.disabled = true;
 
-        await sendPageToCloudflare({ pager, message: finalMsg, fromName: FROM_NAME });
+        await sendPageToWorker({ pager, message: msg });
 
         pmStatus.textContent = "Sent ✅";
-        status.textContent = `Page sent to ${current.name} (pager ${pager})`;
-        setTimeout(close, 350);
+        toast(`Page sent to ${current.name} (${pager})`);
+        setTimeout(close, 250);
       } catch (e) {
         console.error(e);
         pmStatus.textContent = `Failed: ${e.message}`;
       } finally {
-        send.disabled = false;
-        cancel.disabled = false;
+        sendBtn.disabled = false;
+        cancelBtn.disabled = false;
       }
     }
 
-    // Close behaviors
     closeBtn.addEventListener("click", close);
-    cancel.addEventListener("click", close);
+    cancelBtn.addEventListener("click", close);
     overlay.addEventListener("click", (e) => {
       if (e.target === overlay) close();
     });
     document.addEventListener("keydown", (e) => {
       if (overlay.style.display !== "none" && e.key === "Escape") close();
     });
-
-    send.addEventListener("click", doSend);
+    sendBtn.addEventListener("click", send);
 
     return { open, close };
   })();
 
   // =========================
-  // Rendering
+  // Render using your CSS classes
   // =========================
   function render(list) {
-    if (!Array.isArray(list)) list = [];
-
-    // Group by category
+    // group by category
     const groups = new Map();
-    for (const entry of list) {
-      const cat = String(entry.category || "Other").trim() || "Other";
+    for (const e of list) {
+      const cat = String(e.category || "Other").trim() || "Other";
       if (!groups.has(cat)) groups.set(cat, []);
-      groups.get(cat).push(entry);
+      groups.get(cat).push(e);
     }
 
-    // Sort categories, then names
     const cats = Array.from(groups.keys()).sort((a, b) => a.localeCompare(b));
     for (const cat of cats) {
       groups.get(cat).sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")));
     }
 
-    // Build HTML
-    const out = [];
+    const html = [];
     for (const cat of cats) {
-      out.push(`
-        <section class="dir-group" style="margin: 14px 0;">
-          <div class="dir-cat" style="
-            font-weight: 800; font-size: 14px; letter-spacing: .2px;
-            margin: 10px 2px; color: #222;">
-            ${escapeHtml(cat)}
+      const items = groups.get(cat);
+
+      html.push(`
+        <div class="card">
+          <div class="row">
+            <div style="font-weight:900">${escapeHtml(cat)}</div>
           </div>
-          <div class="dir-list" style="display: grid; gap: 10px;">
       `);
 
-      for (const e of groups.get(cat)) {
+      for (const e of items) {
         const name = String(e.name || "Unknown");
         const notes = String(e.notes || "").trim();
         const calls = Array.isArray(e.call) ? e.call.filter(Boolean) : [];
-        const pager = e.pager != null ? String(e.pager) : "";
+        const faxes = Array.isArray(e.fax) ? e.fax.filter(Boolean) : [];
+        const pagerDigits = digitsOnly(e.pager);
 
-        // Action buttons
-        const callBtns = calls
-          .map((c) => {
-            const d = digitsOnly(c);
-            const label = formatPhone(c);
-            if (!d) return "";
-            return `<a class="btn call" href="${telHref(d)}"
-                      style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
-                      padding:8px 10px; border-radius:12px; border:1px solid #ddd; font-weight:700; color:#111;">
-                      Call ${escapeHtml(label)}
-                    </a>`;
-          })
-          .join(" ");
-
-        const pageBtn = digitsOnly(pager)
-          ? `<button class="btn page" data-name="${escapeHtml(name)}" data-pager="${escapeHtml(pager)}"
-              style="display:inline-flex; align-items:center; justify-content:center;
-              padding:8px 10px; border-radius:12px; border:1px solid #111; background:#111; color:#fff; font-weight:800; cursor:pointer;">
-              Page
-            </button>`
-          : "";
-
-        out.push(`
-          <div class="dir-card" style="
-            background:#fff; border:1px solid #eee; border-radius:14px;
-            box-shadow: 0 8px 22px rgba(0,0,0,.06);
-            padding:12px 12px; display:grid; gap:8px;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+        html.push(`
+          <div class="row">
+            <div style="display:flex; justify-content:space-between; gap:10px; align-items:flex-start;">
               <div style="min-width:0;">
-                <div style="font-weight:900; font-size:15px; color:#111; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
-                  ${escapeHtml(name)}
-                </div>
-                ${
-                  notes
-                    ? `<div style="margin-top:4px; font-size:13px; color:#444;">${escapeHtml(notes)}</div>`
-                    : ""
-                }
-                ${
-                  digitsOnly(pager)
-                    ? `<div style="margin-top:4px; font-size:12px; color:#666;">Pager: ${escapeHtml(
-                        digitsOnly(pager)
-                      )}</div>`
-                    : ""
-                }
+                <div style="font-weight:950">${escapeHtml(name)}</div>
+                ${notes ? `<div class="muted" style="font-size:12px; margin-top:3px;">${escapeHtml(notes)}</div>` : ""}
+                ${pagerDigits ? `<div class="muted" style="font-size:12px; margin-top:3px;">Pager: ${escapeHtml(pagerDigits)}</div>` : ""}
               </div>
             </div>
-            <div class="dir-actions" style="display:flex; flex-wrap:wrap; gap:8px;">
-              ${callBtns}
-              ${pageBtn}
+
+            <div class="chips">
+              ${calls
+                .map((c) => {
+                  const d = digitsOnly(c);
+                  if (!d) return "";
+                  return `<a class="chip" href="${telHref(d)}">Call ${escapeHtml(formatPhone(c))}</a>`;
+                })
+                .join("")}
+
+              ${faxes
+                .map((f) => {
+                  const d = digitsOnly(f);
+                  if (!d) return "";
+                  return `<a class="chip chip--fax" href="${telHref(d)}">Fax ${escapeHtml(formatPhone(f))}</a>`;
+                })
+                .join("")}
+
+              ${
+                pagerDigits
+                  ? `<button class="chip chip--page" type="button" data-name="${escapeHtml(
+                      name
+                    )}" data-pager="${escapeHtml(pagerDigits)}">Page</button>`
+                  : ""
+              }
             </div>
           </div>
         `);
       }
 
-      out.push(`</div></section>`);
+      html.push(`</div>`);
     }
 
-    content.innerHTML = out.join("");
+    content.innerHTML = html.join("");
 
     // Wire Page buttons
-    content.querySelectorAll("button.btn.page").forEach((btn) => {
+    content.querySelectorAll('button.chip--page[data-pager]').forEach((btn) => {
       btn.addEventListener("click", () => {
         const name = btn.getAttribute("data-name") || "Recipient";
         const pager = btn.getAttribute("data-pager") || "";
@@ -446,45 +401,36 @@
 
   function applyFilter() {
     const query = norm(q);
-    filtered = all.filter((e) => matchesEntry(e, query));
+    const filtered = all.filter((e) => matchesEntry(e, query));
     status.textContent = `Loaded ${all.length} entries • Showing ${filtered.length}`;
     render(filtered);
   }
 
   // =========================
-  // Load
+  // Load directory JSON
   // =========================
-  async function load() {
-    status.textContent = "Loading directory…";
-    try {
-      const res = await fetch(DATA_URL, { cache: "no-store" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const json = await res.json();
-      if (!Array.isArray(json)) throw new Error("directory2.json must be a JSON array");
-      all = json;
-      applyFilter();
-    } catch (err) {
-      console.error(err);
-      status.textContent = `Failed to load directory2.json: ${err.message}`;
-      content.innerHTML = `
-        <div style="padding:14px; background:#fff; border:1px solid #eee; border-radius:14px;">
-          <div style="font-weight:900; margin-bottom:6px;">Could not load directory</div>
-          <div style="color:#444; font-size:13px;">${escapeHtml(err.message)}</div>
-        </div>
-      `;
-    }
+  let all = [];
+  try {
+    status.textContent = "Loading…";
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    if (!Array.isArray(json)) throw new Error("directory2.json must be a JSON array");
+    all = json;
+    applyFilter();
+  } catch (err) {
+    console.error(err);
+    status.textContent = `Failed to load directory2.json: ${err.message}`;
+    content.innerHTML = `<div class="card"><div class="row">Load failed: ${escapeHtml(
+      err.message
+    )}</div></div>`;
   }
 
-  // =========================
   // Search
-  // =========================
   let t = null;
   search.addEventListener("input", (e) => {
     q = e.target.value || "";
     clearTimeout(t);
     t = setTimeout(applyFilter, 120);
   });
-
-  // Go
-  load();
 })();
