@@ -3,50 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FHMC Directory</title>
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <title>FHMC Directory (Test)</title>
+  <style>
+    body { font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial; margin: 0; background: #f6f7fb; color:#111; }
+    header { padding: 16px; background:#111827; color:#fff; position: sticky; top:0; z-index: 5; }
+    header .row { display:flex; gap: 12px; align-items:center; flex-wrap:wrap; }
+    header input { flex:1; min-width: 220px; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.08); color:#fff; outline:none; }
+    header .pill { padding: 8px 10px; border-radius: 999px; background: rgba(255,255,255,.12); font-size: 12px; }
+    main { padding: 16px; max-width: 1100px; margin: 0 auto; }
+    .category { margin: 18px 0 24px; }
+    .category h2 { margin: 0 0 10px; font-size: 16px; color:#374151; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .card { background:#fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px; box-shadow: 0 1px 8px rgba(0,0,0,.03); }
+    .title { font-weight: 700; }
+    .notes { margin-top: 6px; font-size: 12px; color:#6b7280; }
+    .actions { margin-top: 10px; display:flex; flex-wrap:wrap; gap: 8px; }
+    .btn, button.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding: 9px 10px; border-radius: 12px; border: 1px solid #e5e7eb; background:#fff; cursor:pointer; text-decoration:none; color:#111; font-size: 13px; }
+    .btn.primary { background:#111827; border-color:#111827; color:#fff; }
+    .btn.secondary { background:#f3f4f6; }
+    .btn:active { transform: translateY(1px); }
+    .muted { color:#6b7280; font-size: 12px; }
+    .error { background:#fff1f2; border:1px solid #fecdd3; color:#9f1239; padding: 12px; border-radius: 12px; }
+    .loading { padding: 14px; border-radius: 12px; background:#fff; border:1px solid #e5e7eb; }
+
+    /* Modal */
+    #pagerOverlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); display:none; align-items:center; justify-content:center; padding: 16px; z-index: 50; }
+    #pagerModal { width: min(560px, 100%); background:#fff; border-radius: 16px; border:1px solid #e5e7eb; box-shadow: 0 15px 40px rgba(0,0,0,.2); padding: 14px; }
+    #pagerModal .top { display:flex; align-items:flex-start; justify-content:space-between; gap: 12px; }
+    #pagerModal h3 { margin: 0; font-size: 16px; }
+    #pagerMeta { margin-top: 6px; color:#6b7280; font-size: 12px; }
+    #pagerMsg { width: 100%; margin-top: 10px; min-height: 110px; padding: 10px; border-radius: 12px; border:1px solid #e5e7eb; outline:none; font-size: 14px; }
+    #pagerModal .row { display:flex; gap: 10px; margin-top: 12px; justify-content:flex-end; flex-wrap:wrap; }
+  </style>
 </head>
-<body class="page">
 
-<header class="topbar">
-  <div class="topbar__title">
-    <p class="muted">Tap to call. Tap pager to send a page.</p>
-  </div>
-  <div class="topbar__controls">
-    <input id="search" type="search" placeholder="Search name, category, extension, pager..." />
-  </div>
-</header>
+<body>
+  <header>
+    <div class="row">
+      <div style="font-weight:800;">FHMC Directory (Test)</div>
+      <input id="searchInput" placeholder="Search name, category, notes, ext, phone, pager…" />
+      <div class="pill" id="countPill">0 entries</div>
+      <a class="btn secondary" href="index.html" title="Go to stable call-only directory">Stable</a>
+    </div>
+    <div class="muted" style="margin-top:8px;">
+      Data source: <code>directory2.json</code> (full call + pager for testing)
+    </div>
+  </header>
 
-<main class="container">
-  <div id="status" class="status muted">Loading…</div>
-  <div id="content"></div>
-</main>
+  <main>
+    <div id="status" class="loading">Loading directory2.json…</div>
+    <div id="root"></div>
+  </main>
 
-<footer class="footer">
-  <p class="credits">Make everyday work a little easier — Moh Sayyar, MD</p>
-</footer>
+  <!-- Paging Test Modal (no send yet; this just lets you test the UI) -->
+  <div id="pagerOverlay" role="dialog" aria-modal="true">
+    <div id="pagerModal">
+      <div class="top">
+        <div>
+          <h3 id="pagerWho">Page</h3>
+          <div id="pagerMeta"></div>
+        </div>
+        <button class="btn secondary" id="pagerCloseBtn" type="button">Close</button>
+      </div>
 
-<div id="toast" class="toast" aria-live="polite"></div>
+      <textarea id="pagerMsg" placeholder="Type message (test UI only)…"></textarea>
 
-<script src="./assets/paging.js"></script>
-<script src="./assets/data/directory2.js"></script>
-<script src="./assets/app2.js"></script>
-
-  <div id="directoryRoot"></div>
-
-<!-- Test pager overlay (basic) -->
-<div id="pagerOverlay" style="display:none;">
-  <div class="modal">
-    <div><strong id="pagerWho"></strong></div>
-    <div>Pager: <span id="pagerNum"></span></div>
-    <textarea id="pagerMsg" placeholder="Message..."></textarea>
-    <div class="actions">
-      <button class="btn secondary" onclick="closePagerBox()">Close</button>
-      <button class="btn" disabled>Send (coming)</button>
+      <div class="row">
+        <button class="btn secondary" id="pagerCopyBtn" type="button">Copy message</button>
+        <button class="btn primary" id="pagerSendBtn" type="button" disabled>Send (coming)</button>
+      </div>
+      <div class="muted" style="margin-top:10px;">
+        This page is for testing the UI + data flow. Sending will be wired once paging POST is fixed.
+      </div>
     </div>
   </div>
-</div>
 
-
+  <script src="app2.js"></script>
 </body>
 </html>
