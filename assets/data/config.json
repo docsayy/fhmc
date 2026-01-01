@@ -5,5 +5,5 @@
   "fromName": "FHMC Directory",
   "defaultPageMessage": "Please call back.",
   "pagerSendEndpoint": "https://fhmc-pager.msayan92.workers.dev/send",
-  "pagerSharedToken": "REPLACE_WITH_YOUR_TOKEN"
+  "pagerSharedToken": "11611"
 }
