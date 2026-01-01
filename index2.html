@@ -32,5 +32,21 @@
 <script src="./assets/data/directory2.js"></script>
 <script src="./assets/app2.js"></script>
 
+  <div id="directoryRoot"></div>
+
+<!-- Test pager overlay (basic) -->
+<div id="pagerOverlay" style="display:none;">
+  <div class="modal">
+    <div><strong id="pagerWho"></strong></div>
+    <div>Pager: <span id="pagerNum"></span></div>
+    <textarea id="pagerMsg" placeholder="Message..."></textarea>
+    <div class="actions">
+      <button class="btn secondary" onclick="closePagerBox()">Close</button>
+      <button class="btn" disabled>Send (coming)</button>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
