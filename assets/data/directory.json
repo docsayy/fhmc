@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Pharmacy",
+    "name": "MICU Pharmacy (Sameul Hart)",
+    "call": ["4471"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Pharmacy",
+    "name": "Inpatient Pharmacy",
+    "call": ["8449"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Pagers",
+    "name": "OB/GYN",
+    "call": [],
+    "fax": [],
+    "pager": "74440",
+    "notes": ""
+  }
+]
