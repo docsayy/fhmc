@@ -1,0 +1,8 @@
+{
+  "hospitalPhonePrefixDigits": "1718670",
+  "pagerEmailPrefix": "11611",
+  "pagerEmailDomain": "myairmail.com",
+  "fromName": "FHMC Directory",
+  "defaultPageMessage": "Please call back.",
+  "pagerSendEndpoint": "https://REPLACE-WITH-YOUR-WORKER-URL/send"
+}
