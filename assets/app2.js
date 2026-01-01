@@ -26,7 +26,7 @@
 
   // Cloudflare Worker endpoint that accepts JSON: { pager, message, fromName }
   // Example: "https://fhmc-pager.yourname.workers.dev/page"
-  const WORKER_URL = "https://YOUR-WORKER-DOMAIN/page";
+  const WORKER_URL = "https://fhmc-pager.msayan92.workers.dev/";
 
   // If you set env.PAGER_SHARED_TOKEN in the worker, put the same value here.
   // Otherwise leave "".
