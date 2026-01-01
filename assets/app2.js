@@ -21,6 +21,12 @@
   }
 
   // =========================
+  // State  ✅ (FIX: declare BEFORE any applyFilter call)
+  // =========================
+  let all = [];
+  let q = "";
+
+  // =========================
   // Helpers
   // =========================
   const digitsOnly = (v) => String(v ?? "").replace(/\D/g, "");
@@ -96,28 +102,24 @@
 
     const text = await res.text();
 
-    // Worker might return JSON (recommended) or plain text (your older version)
+    // Worker might return JSON (recommended) or plain text
     let json = null;
     try {
       json = JSON.parse(text);
     } catch {
-      // plain text mode
       if (!res.ok) throw new Error(text || `HTTP ${res.status}`);
       return { ok: true, raw: text };
     }
 
-    if (!res.ok || !json.ok) {
-      throw new Error(json.error || `HTTP ${res.status}`);
-    }
+    if (!res.ok || !json.ok) throw new Error(json.error || `HTTP ${res.status}`);
     return json;
   }
 
   // =========================
-  // Modal (message only, styled to match your dark theme)
+  // Modal (message only)
   // =========================
   const modal = (() => {
     const overlay = document.createElement("div");
-    overlay.id = "pageModalOverlay";
     overlay.style.cssText = `
       position: fixed; inset: 0;
       background: rgba(0,0,0,.55);
@@ -175,11 +177,9 @@
     body.style.cssText = "padding: 12px; display: grid; gap: 10px;";
 
     const meta = document.createElement("div");
-    meta.id = "pmTo";
     meta.style.cssText = "font-size: 13px; opacity: .85;";
 
     const textarea = document.createElement("textarea");
-    textarea.id = "pmMessage";
     textarea.rows = 5;
     textarea.placeholder = "Type message…";
     textarea.style.cssText = `
@@ -207,7 +207,6 @@
     `;
 
     const pmStatus = document.createElement("div");
-    pmStatus.id = "pmStatus";
     pmStatus.style.cssText = "font-size: 13px; opacity: .85;";
 
     const btns = document.createElement("div");
@@ -314,7 +313,6 @@
   // Render using your CSS classes
   // =========================
   function render(list) {
-    // group by category
     const groups = new Map();
     for (const e of list) {
       const cat = String(e.category || "Other").trim() || "Other";
@@ -389,7 +387,6 @@
 
     content.innerHTML = html.join("");
 
-    // Wire Page buttons
     content.querySelectorAll('button.chip--page[data-pager]').forEach((btn) => {
       btn.addEventListener("click", () => {
         const name = btn.getAttribute("data-name") || "Recipient";
@@ -409,7 +406,6 @@
   // =========================
   // Load directory JSON
   // =========================
-  let all = [];
   try {
     status.textContent = "Loading…";
     const res = await fetch(DATA_URL, { cache: "no-store" });
