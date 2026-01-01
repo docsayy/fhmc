@@ -97,3 +97,27 @@ body {
 }
 
 .toast.show { display: block }
+
+
+/* Make footer stick to bottom when content is short */
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  flex: 1; /* pushes footer down */
+}
+
+/* Footer styling */
+.footer{
+  padding: 18px 14px;
+  text-align: center;
+}
+
+.credits{
+  margin: 0;
+  opacity: 0.75;
+  font-size: 12px;
+}
