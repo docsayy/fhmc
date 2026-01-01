@@ -55,6 +55,7 @@
     "pager": null,
     "notes": "Onsite"
   },
+
   {
     "category": "Radiology — Radiologists (Remote)",
     "name": "Dr Huang",
@@ -135,6 +136,7 @@
     "pager": null,
     "notes": "Remote"
   },
+
   {
     "category": "Radiology",
     "name": "Radiology (Main)",
@@ -175,6 +177,7 @@
     "pager": null,
     "notes": ""
   },
+
   {
     "category": "Pagers",
     "name": "ABG Drop-off Sample",
@@ -255,6 +258,7 @@
     "pager": "74703",
     "notes": ""
   },
+
   {
     "category": "Pharmacy",
     "name": "MICU Pharmacy (Sameul Hart)",
@@ -271,6 +275,7 @@
     "pager": null,
     "notes": ""
   },
+
   {
     "category": "Leadership & CMA’s",
     "name": "Sonia McNeil — Director",
@@ -624,3 +629,474 @@
     "call": ["5550", "5551"],
     "fax": [],
     "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "2 WEST (CDU)",
+    "call": ["5693", "5694", "5078"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "3N1 (Psych)",
+    "call": ["5547", "5509"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "TELE",
+    "call": ["5544", "5545"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "3 EAST (ICU’s)",
+    "call": ["5559"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "3 WEST",
+    "call": ["5554", "5556"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "4N1",
+    "call": ["5707", "5706"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "4N2",
+    "call": ["5552", "5553"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "4 WEST (PED)",
+    "call": ["5526"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "5 EAST — OB/GYN, Medical, Ped Clinic",
+    "call": ["8989", "5488", "3149"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "5 WEST",
+    "call": ["5548", "5549"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "Newborn Nursery / NICU",
+    "call": ["5386", "5363"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Stations",
+    "name": "Transitional Care Unit (TCU)",
+    "call": ["5554", "5200"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Other Departments",
+    "name": "Dr. Alessandro Solinas — Chairman",
+    "call": ["5774"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Dr. Karen Beekman — Program Director",
+    "call": ["5218"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Dr. Akbar Khan — Medical Director",
+    "call": ["4518"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Admitting",
+    "call": ["5435", "5436", "5437"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Amb/Surg",
+    "call": ["3029", "3181"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Emergency Room",
+    "call": ["5494", "5495"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Endoscopy",
+    "call": ["5970"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Health Information",
+    "call": ["5425"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "IT / MIS Dept.",
+    "call": ["5560", "4567"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "MICU",
+    "call": ["5557"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "SICU",
+    "call": ["5558"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Nursing Dept. & Nursing Education",
+    "call": ["5577", "5840"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Out-Pt Clinic",
+    "call": ["5487", "5505"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Palliative Care Social Worker",
+    "call": ["4454"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Psychiatry Social Work",
+    "call": ["5546", "5547", "4450"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Reflections & Psych Counselor",
+    "call": ["5562", "5790"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Exec. Receptionist (Sara Khan)",
+    "call": ["5408"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "MedSys Transportation",
+    "call": ["7182068911"],
+    "fax": [],
+    "pager": null,
+    "notes": "Direct"
+  },
+  {
+    "category": "Other Departments",
+    "name": "Human Resources",
+    "call": ["5585"],
+    "fax": [],
+    "pager": null,
+    "notes": "OHS: 5630"
+  },
+  {
+    "category": "Other Departments",
+    "name": "OHS",
+    "call": ["5630"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Kronos",
+    "call": ["8917", "5743", "4541"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Mailroom",
+    "call": ["3103"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Out-Pt Pharmacy",
+    "call": ["3108"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Pt. Accounts (Jose Gomez)",
+    "call": ["5913"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Pt. Advocate (Rafael Escamilla)",
+    "call": ["5388"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Pager System",
+    "call": ["6081", "6083"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Risk Management (FHMC)",
+    "call": ["4596"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "2nd Floor Resident Room",
+    "call": ["3348"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Blood Bank",
+    "call": ["3023", "3099", "5483"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "CDU Triage",
+    "call": ["4524"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "CDU",
+    "call": ["4502", "4539", "5540"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Dialysis",
+    "call": ["5912", "5948"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "EEG",
+    "call": ["5294", "5680", "5921"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Infection Control",
+    "call": ["3132"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Interventional Radiology",
+    "call": ["5910"],
+    "fax": [],
+    "pager": null,
+    "notes": "Dr Solomon prefers AMS: ext 8944"
+  },
+  {
+    "category": "Other Departments",
+    "name": "Dr Solomon (prefers AMS)",
+    "call": ["8944"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Nutrition",
+    "call": ["5400", "5401"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "OR",
+    "call": ["3027", "5607", "5608"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "PACU",
+    "call": ["5617", "5635", "5688"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Labs",
+    "name": "Accessioning",
+    "call": ["5481", "5482"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Labs",
+    "name": "Chemistry",
+    "call": ["5532", "5605"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Labs",
+    "name": "Hematology",
+    "call": ["5722", "3182", "4464"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Labs",
+    "name": "Microbiology",
+    "call": ["5484", "5969", "8836"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Labs",
+    "name": "Pathology",
+    "call": ["5479", "5930", "8827"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Radiology",
+    "name": "Envision (Off-hours readings)",
+    "call": ["8885573617"],
+    "fax": [],
+    "pager": null,
+    "notes": "Direct"
+  },
+
+  {
+    "category": "Testing",
+    "name": "Testing",
+    "call": [],
+    "fax": [],
+    "pager": "11170",
+    "notes": ""
+  }
+]
