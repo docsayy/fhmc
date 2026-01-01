@@ -1,3 +1,4 @@
+// assets/paging.js
 window.Paging = (() => {
   let CONFIG = null;
 
@@ -8,15 +9,42 @@ window.Paging = (() => {
     return CONFIG;
   }
 
+  function ensureToast() {
+    let el = document.getElementById("toast");
+    if (el) return el;
+
+    // Create a simple toast if your HTML doesn't already include one
+    el = document.createElement("div");
+    el.id = "toast";
+    el.style.cssText = `
+      position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
+      background:#111827;color:#fff;border:1px solid rgba(255,255,255,.18);
+      padding:10px 12px;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.25);
+      font-size:13px;opacity:0;pointer-events:none;transition:opacity .18s ease;
+      z-index:10000;max-width:min(520px,calc(100vw - 28px));
+      white-space:pre-wrap;text-align:center;
+    `;
+    document.body.appendChild(el);
+
+    // If you rely on CSS class "show" elsewhere, we still support it
+    const style = document.createElement("style");
+    style.textContent = `#toast.show{opacity:1}`;
+    document.head.appendChild(style);
+
+    return el;
+  }
+
   function showToast(text, ms = 2200) {
-    const el = document.getElementById("toast");
+    const el = ensureToast();
     el.textContent = text;
     el.classList.add("show");
     clearTimeout(showToast._t);
     showToast._t = setTimeout(() => el.classList.remove("show"), ms);
   }
 
-  function digitsOnly(s) { return String(s || "").replace(/\D/g, ""); }
+  function digitsOnly(s) {
+    return String(s || "").replace(/\D/g, "");
+  }
 
   function ensureModal() {
     let modal = document.getElementById("pageModal");
@@ -53,21 +81,32 @@ window.Paging = (() => {
 
     modal.querySelector("#pageClose").onclick = () => (modal.style.display = "none");
     modal.querySelector("#pageCancel").onclick = () => (modal.style.display = "none");
-    modal.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) modal.style.display = "none";
+    });
 
     return modal;
   }
 
-  async function promptAndSendPage(pagerDigits) {
+  // Core prompt + send logic (your original)
+  async function promptAndSendPage(pagerDigits, entry) {
     const cfg = await loadConfig();
     const pager = digitsOnly(pagerDigits);
-    if (!pager) { showToast("Invalid pager"); return; }
+    if (!pager) {
+      showToast("Invalid pager");
+      return;
+    }
 
     const modal = ensureModal();
     const textarea = modal.querySelector("#pageMsg");
     const sendBtn = modal.querySelector("#pageSend");
 
     textarea.value = "";
+
+    // Optional: make placeholder helpful during testing
+    const label = entry?.name ? `Message to ${entry.name}…` : "Type message…";
+    textarea.placeholder = label;
+
     modal.style.display = "flex";
     textarea.focus();
 
@@ -94,7 +133,6 @@ window.Paging = (() => {
           method: "POST",
           headers: {
             "content-type": "application/json",
-            // recommended if your site is public:
             ...(cfg.pagerSharedToken ? { "x-pager-token": cfg.pagerSharedToken } : {})
           },
           body: JSON.stringify({
@@ -112,5 +150,10 @@ window.Paging = (() => {
     };
   }
 
-  return { loadConfig, promptAndSendPage, showToast };
+  // ✅ Compatibility method for app2.js: window.Paging.send(pager, entry?)
+  function send(pagerDigits, entry) {
+    return promptAndSendPage(pagerDigits, entry);
+  }
+
+  return { loadConfig, promptAndSendPage, send, showToast };
 })();
