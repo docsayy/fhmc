@@ -1,5 +1,184 @@
 [
   {
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Arnuk",
+  "call": ["7182066955"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite"
+},
+{
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Serras",
+  "call": ["7182067753"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite (ext 7753)"
+},
+{
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Yoeli",
+  "call": ["7182068790"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite"
+},
+{
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Lee",
+  "call": ["7186703095"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite"
+},
+{
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Premkumar",
+  "call": ["7186708942"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite"
+},
+{
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Friedman",
+  "call": ["7186708944"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite"
+},
+{
+  "category": "Radiology — Radiologists (Onsite)",
+  "name": "Dr Gordon",
+  "call": ["7186708943"],
+  "fax": [],
+  "pager": null,
+  "notes": "Onsite"
+}
+
+  {
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Huang",
+  "call": ["5166628623"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Gordon",
+  "call": ["8457095697"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Zaveri",
+  "call": ["9178813016"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Janczuk",
+  "call": ["9174069432"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Leung",
+  "call": ["9178559298"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Chiu",
+  "call": ["7182066147"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Al-Husayni",
+  "call": ["7182067751"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Sahai",
+  "call": ["7182066111"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Patel",
+  "call": ["9179724311"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+},
+{
+  "category": "Radiology — Radiologists (Remote)",
+  "name": "Dr Yoeli",
+  "call": ["9142616807"],
+  "fax": [],
+  "pager": null,
+  "notes": "Remote"
+}
+
+ {
+  "category": "Radiology",
+  "name": "Radiology (Main)",
+  "call": ["5448"],
+  "fax": [],
+  "pager": null,
+  "notes": ""
+},
+{
+  "category": "Radiology",
+  "name": "X-Ray",
+  "call": ["5447"],
+  "fax": [],
+  "pager": null,
+  "notes": ""
+},
+{
+  "category": "Radiology",
+  "name": "CT",
+  "call": ["5784"],
+  "fax": [],
+  "pager": null,
+  "notes": ""
+},
+{
+  "category": "Radiology",
+  "name": "Nuclear Medicine",
+  "call": ["5902"],
+  "fax": [],
+  "pager": null,
+  "notes": ""
+},
+{
+  "category": "Cardiology",
+  "name": "EKG",
+  "call": ["5361"],
+  "fax": [],
+  "pager": null,
+  "notes": ""
+}
+
+  {
     "category": "Pagers",
     "name": "ABG Drop-off Sample",
     "call": [],
