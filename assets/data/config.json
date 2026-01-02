@@ -4,6 +4,6 @@
   "pagerEmailDomain": "myairmail.com",
   "fromName": "FHMC Directory",
   "defaultPageMessage": "Please call back.",
-  "pagerSendEndpoint": "https://fhmc-pager.msayan92.workers.dev/send",
+  "pagerSendEndpoint": "https://fhmc-pager.msayan92.workers.dev",
   "pagerSharedToken": "11611"
 }
