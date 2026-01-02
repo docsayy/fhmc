@@ -8,6 +8,11 @@
   const SHARED_TOKEN = ""; // only if env.PAGER_SHARED_TOKEN is set
   const FROM_NAME = "FHMC Directory";
 
+  // ✅ Dialing config
+  // You told me FHMC direct-dial pattern is 718-670-**** for extensions.
+  // Store as digits only with country code:
+  const EXT_DIRECT_DIAL_PREFIX = "1718670"; // +1 718 670
+
   // =========================
   // DOM
   // =========================
@@ -39,15 +44,45 @@
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 
+  function isExtensionDigits(x) {
+    return x.length === 4 || x.length === 5;
+  }
+
   function formatPhone(d) {
     const x = digitsOnly(d);
+
+    // ✅ Display extensions clearly (but dialing is handled separately)
+    if (isExtensionDigits(x)) return `ext ${x}`;
+
     if (x.length === 10) return `(${x.slice(0, 3)}) ${x.slice(3, 6)}-${x.slice(6)}`;
+    if (x.length === 11 && x.startsWith("1"))
+      return `(${x.slice(1, 4)}) ${x.slice(4, 7)}-${x.slice(7)}`;
+
     return String(d || "");
   }
 
+  // ✅ FIXED: Always make tel: links dial a full number
   function telHref(d) {
     const x = digitsOnly(d);
-    return x ? `tel:${x}` : "#";
+    if (!x) return "#";
+
+    // Extensions -> expand to 718-670-xxxx (direct-dial)
+    if (isExtensionDigits(x)) {
+      return `tel:${EXT_DIRECT_DIAL_PREFIX}${x}`;
+    }
+
+    // 10-digit US number -> add country code
+    if (x.length === 10) {
+      return `tel:1${x}`;
+    }
+
+    // 11-digit starting with 1 -> keep as-is
+    if (x.length === 11 && x.startsWith("1")) {
+      return `tel:${x}`;
+    }
+
+    // Fallback
+    return `tel:${x}`;
   }
 
   function matchesEntry(entry, query) {
