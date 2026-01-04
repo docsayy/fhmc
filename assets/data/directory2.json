@@ -1,6 +1,6 @@
 [
   {
-  "category": "Surgery Lounge",
+  "category": "Other Departments",
   "name": "Surgery Lounge",
   "call": ["8923", "8924"],
   "fax": [],
@@ -260,14 +260,6 @@
   },
   {
     "category": "Pagers",
-    "name": "Podiatry (Alt)",
-    "call": [],
-    "fax": [],
-    "pager": "10498",
-    "notes": ""
-  },
-  {
-    "category": "Pagers",
     "name": "Psych (After 4PM)",
     "call": [],
     "fax": [],
@@ -301,7 +293,7 @@
 
   {
     "category": "Pharmacy",
-    "name": "MICU Pharmacy (Sameul Hart)",
+    "name": "MICU (Sameul Hart)",
     "call": ["4471"],
     "fax": [],
     "pager": null,
@@ -810,8 +802,32 @@
   },
   {
     "category": "Other Departments",
-    "name": "Emergency Room",
+    "name": "Pysch",
+    "call": ["4414", "8844"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Other Departments",
+    "name": "Emergency Room - Main",
     "call": ["5494", "5495"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Other Departments",
+    "name": "Emergency Room",
+    "call": ["3053", "3054", "3056"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Other Departments",
+    "name": "Respiratory Therapy",
+    "call": ["8888"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -873,6 +889,13 @@
     "notes": ""
   },
   {
+    "category": "Other Departments",
+    "name": "Palliative Fellow",
+    "call": ["3064"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },{
     "category": "Other Departments",
     "name": "Palliative Care Social Worker",
     "call": ["4454"],
@@ -945,7 +968,7 @@
     "notes": ""
   },
   {
-    "category": "Other Departments",
+    "category": "Pharmacy",
     "name": "Out-Pt Pharmacy",
     "call": ["3108"],
     "fax": [],
