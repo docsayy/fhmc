@@ -1,46 +1,152 @@
 [
+  /* =========================
+     NURSING UNITS & STATIONS
+     ========================= */
+
   {
-  "category": "Other Departments",
-  "name": "Surgery Lounge",
-  "call": ["8923", "8924"],
-  "fax": [],
-  "pager": null,
-  "notes": ""
-},
-{
-  "category": "Vascular Lab",
-  "name": "Vascular Lab (Appointments)",
-  "call": ["5937"],
-  "fax": [],
-  "pager": null,
-  "notes": ""
-},
-{
-  "category": "4N",
-  "name": "4N Residents Documentation Room",
-  "call": ["8003", "6074", "8735", "8741"],
-  "fax": [],
-  "pager": null,
-  "notes": ""
-},
-{
-  "category": "4N",
-  "name": "4N1 Nursing Station",
-  "call": ["5706", "5707", "5708"],
-  "fax": [],
-  "pager": null,
-  "notes": ""
-},
-{
-  "category": "4N",
-  "name": "4N2 Nursing Station",
-  "call": ["8285", "5552", "5553"],
-  "fax": [],
-  "pager": null,
-  "notes": ""
-},
+    "category": "Nursing Units & Stations — 4N",
+    "name": "4N Residents Documentation Room",
+    "call": ["8003", "6074", "8735", "8741"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Nursing Units & Stations — 4N",
+    "name": "4N1 Nursing Station",
+    "call": ["5706", "5707", "5708"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations — 4N",
+    "name": "4N2 Nursing Station",
+    "call": ["8285", "5552", "5553"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Nursing Units & Stations",
+    "name": "2N1",
+    "call": ["5536", "5537"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "2N2",
+    "call": ["5550", "5551"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "2 WEST (CDU)",
+    "call": ["5693", "5694", "5078"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "3N1 (Psych)",
+    "call": ["5547", "5509"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "TELE",
+    "call": ["5544", "5545"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "3 EAST (ICU’s)",
+    "call": ["5559"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "3 WEST",
+    "call": ["5554", "5556"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations — 4N",
+    "name": "4N1",
+    "call": ["5707", "5706"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations — 4N",
+    "name": "4N2",
+    "call": ["5552", "5553"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "4 WEST (PED)",
+    "call": ["5526"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "5 EAST — OB/GYN, Medical, Ped Clinic",
+    "call": ["8989", "5488", "3149"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "5 WEST",
+    "call": ["5548", "5549"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "Newborn Nursery / NICU",
+    "call": ["5386", "5363"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Units & Stations",
+    "name": "Transitional Care Unit (TCU)",
+    "call": ["5554", "5200"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  /* =========================
+     RADIOLOGY
+     ========================= */
+
+  {
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Arnuk",
     "call": ["7182066955"],
     "fax": [],
@@ -48,7 +154,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Serras",
     "call": ["7182067753"],
     "fax": [],
@@ -56,7 +162,7 @@
     "notes": "Onsite (ext 7753)"
   },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Yoeli",
     "call": ["7182068790"],
     "fax": [],
@@ -64,7 +170,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Lee",
     "call": ["7186703095"],
     "fax": [],
@@ -72,7 +178,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Premkumar",
     "call": ["7186708942"],
     "fax": [],
@@ -80,7 +186,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Friedman",
     "call": ["7186708944"],
     "fax": [],
@@ -88,7 +194,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Radiologists (Onsite)",
+    "category": "Radiology — Providers (Onsite)",
     "name": "Dr Gordon",
     "call": ["7186708943"],
     "fax": [],
@@ -97,7 +203,7 @@
   },
 
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Huang",
     "call": ["5166628623"],
     "fax": [],
@@ -105,7 +211,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Gordon",
     "call": ["8457095697"],
     "fax": [],
@@ -113,7 +219,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Zaveri",
     "call": ["9178813016"],
     "fax": [],
@@ -121,7 +227,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Janczuk",
     "call": ["9174069432"],
     "fax": [],
@@ -129,7 +235,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Leung",
     "call": ["9178559298"],
     "fax": [],
@@ -137,7 +243,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Chiu",
     "call": ["7182066147"],
     "fax": [],
@@ -145,7 +251,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Al-Husayni",
     "call": ["7182067751"],
     "fax": [],
@@ -153,7 +259,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Sahai",
     "call": ["7182066111"],
     "fax": [],
@@ -161,7 +267,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Patel",
     "call": ["9179724311"],
     "fax": [],
@@ -169,7 +275,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Radiologists (Remote)",
+    "category": "Radiology — Providers (Remote)",
     "name": "Dr Yoeli",
     "call": ["9142616807"],
     "fax": [],
@@ -178,7 +284,7 @@
   },
 
   {
-    "category": "Radiology",
+    "category": "Radiology — Modalities & Operations",
     "name": "Radiology (Main)",
     "call": ["5448"],
     "fax": [],
@@ -186,7 +292,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology",
+    "category": "Radiology — Modalities & Operations",
     "name": "X-Ray",
     "call": ["5447"],
     "fax": [],
@@ -194,7 +300,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology",
+    "category": "Radiology — Modalities & Operations",
     "name": "CT",
     "call": ["5784"],
     "fax": [],
@@ -202,13 +308,26 @@
     "notes": ""
   },
   {
-    "category": "Radiology",
+    "category": "Radiology — Modalities & Operations",
     "name": "Nuclear Medicine",
     "call": ["5902"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
+  {
+    "category": "Radiology — Operations (After Hours)",
+    "name": "Envision (Off-hours readings)",
+    "call": ["8885573617"],
+    "fax": [],
+    "pager": null,
+    "notes": "Direct"
+  },
+
+  /* =========================
+     CARDIOLOGY
+     ========================= */
+
   {
     "category": "Cardiology",
     "name": "EKG",
@@ -218,78 +337,62 @@
     "notes": ""
   },
 
+  /* =========================
+     LABORATORY SERVICES
+     ========================= */
+
   {
-    "category": "Pagers",
-    "name": "ABG Drop-off Sample",
-    "call": [],
+    "category": "Laboratory Services",
+    "name": "Accessioning",
+    "call": ["5481", "5482"],
     "fax": [],
-    "pager": "74705",
+    "pager": null,
     "notes": ""
   },
   {
-    "category": "Pagers",
-    "name": "OB/GYN",
-    "call": [],
+    "category": "Laboratory Services",
+    "name": "Chemistry",
+    "call": ["5532", "5605"],
     "fax": [],
-    "pager": "74440",
+    "pager": null,
     "notes": ""
   },
   {
-    "category": "Pagers",
-    "name": "Ophthalmology",
-    "call": [],
+    "category": "Laboratory Services",
+    "name": "Hematology",
+    "call": ["5722", "3182", "4464"],
     "fax": [],
-    "pager": "12344",
+    "pager": null,
     "notes": ""
   },
   {
-    "category": "Pagers",
-    "name": "Ortho",
-    "call": [],
+    "category": "Laboratory Services",
+    "name": "Microbiology",
+    "call": ["5484", "5969", "8836"],
     "fax": [],
-    "pager": "74051",
+    "pager": null,
     "notes": ""
   },
   {
-    "category": "Pagers",
-    "name": "Podiatry",
-    "call": [],
+    "category": "Laboratory Services",
+    "name": "Pathology",
+    "call": ["5479", "5930", "8827"],
     "fax": [],
-    "pager": "10022",
+    "pager": null,
     "notes": ""
   },
   {
-    "category": "Pagers",
-    "name": "Psych (After 4PM)",
-    "call": [],
+    "category": "Laboratory Services",
+    "name": "Blood Bank",
+    "call": ["3023", "3099", "5483"],
     "fax": [],
-    "pager": "10163",
+    "pager": null,
     "notes": ""
   },
-  {
-    "category": "Pagers",
-    "name": "Surgery (New Consult)",
-    "call": [],
-    "fax": [],
-    "pager": "74494",
-    "notes": ""
-  },
-  {
-    "category": "Pagers",
-    "name": "Surgery (Follow-up)",
-    "call": [],
-    "fax": [],
-    "pager": "74111",
-    "notes": ""
-  },
-  {
-    "category": "Pagers",
-    "name": "Respiratory Therapy",
-    "call": [],
-    "fax": [],
-    "pager": "74703",
-    "notes": ""
-  },
+
+  /* =========================
+     PHARMACY
+     ========================= */
 
   {
     "category": "Pharmacy",
@@ -307,6 +410,18 @@
     "pager": null,
     "notes": ""
   },
+  {
+    "category": "Pharmacy",
+    "name": "Out-Pt Pharmacy",
+    "call": ["3108"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  /* =========================
+     CASE MANAGEMENT / CMA / SOCIAL WORK
+     ========================= */
 
   {
     "category": "Leadership & CMA’s",
@@ -647,400 +762,97 @@
     "notes": ""
   },
 
+  /* =========================
+     PAGERS
+     ========================= */
+
   {
-    "category": "Nursing Stations",
-    "name": "2N1",
-    "call": ["5536", "5537"],
+    "category": "Pagers",
+    "name": "ABG Drop-off Sample",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "74705",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "2N2",
-    "call": ["5550", "5551"],
+    "category": "Pagers",
+    "name": "OB/GYN",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "74440",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "2 WEST (CDU)",
-    "call": ["5693", "5694", "5078"],
+    "category": "Pagers",
+    "name": "Ophthalmology",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "12344",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "3N1 (Psych)",
-    "call": ["5547", "5509"],
+    "category": "Pagers",
+    "name": "Ortho",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "74051",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "TELE",
-    "call": ["5544", "5545"],
+    "category": "Pagers",
+    "name": "Podiatry",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "10022",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "3 EAST (ICU’s)",
-    "call": ["5559"],
+    "category": "Pagers",
+    "name": "Psych (After 4PM)",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "10163",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "3 WEST",
-    "call": ["5554", "5556"],
+    "category": "Pagers",
+    "name": "Surgery (New Consult)",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "74494",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "4N1",
-    "call": ["5707", "5706"],
+    "category": "Pagers",
+    "name": "Surgery (Follow-up)",
+    "call": [],
     "fax": [],
-    "pager": null,
+    "pager": "74111",
     "notes": ""
   },
   {
-    "category": "Nursing Stations",
-    "name": "4N2",
-    "call": ["5552", "5553"],
+    "category": "Pagers",
+    "name": "Respiratory Therapy",
+    "call": [],
     "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Stations",
-    "name": "4 WEST (PED)",
-    "call": ["5526"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Stations",
-    "name": "5 EAST — OB/GYN, Medical, Ped Clinic",
-    "call": ["8989", "5488", "3149"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Stations",
-    "name": "5 WEST",
-    "call": ["5548", "5549"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Stations",
-    "name": "Newborn Nursery / NICU",
-    "call": ["5386", "5363"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Stations",
-    "name": "Transitional Care Unit (TCU)",
-    "call": ["5554", "5200"],
-    "fax": [],
-    "pager": null,
+    "pager": "74703",
     "notes": ""
   },
 
+  /* =========================
+     CLINICAL SERVICES
+     ========================= */
+
   {
-    "category": "Other Departments",
-    "name": "Dr. Alessandro Solinas — Chairman",
-    "call": ["5774"],
+    "category": "Clinical Services",
+    "name": "Vascular Lab (Appointments)",
+    "call": ["5937"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
   {
-    "category": "Other Departments",
-    "name": "Dr. Karen Beekman — Program Director",
-    "call": ["5218"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Dr. Akbar Khan — Medical Director",
-    "call": ["4518"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Admitting",
-    "call": ["5435", "5436", "5437"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Amb/Surg",
-    "call": ["3029", "3181"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Pysch",
-    "call": ["4414", "8844"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Emergency Room - Main",
-    "call": ["5494", "5495"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-    {
-    "category": "Other Departments",
-    "name": "Emergency Room",
-    "call": ["3053", "3054", "3056"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-    {
-    "category": "Other Departments",
-    "name": "Respiratory Therapy",
-    "call": ["8888"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Endoscopy",
-    "call": ["5970"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Health Information",
-    "call": ["5425"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "IT / MIS Dept.",
-    "call": ["5560", "4567"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "MICU",
-    "call": ["5557"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "SICU",
-    "call": ["5558"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Nursing Dept. & Nursing Education",
-    "call": ["5577", "5840"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Out-Pt Clinic",
-    "call": ["5487", "5505"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Palliative Fellow",
-    "call": ["3064"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },{
-    "category": "Other Departments",
-    "name": "Palliative Care Social Worker",
-    "call": ["4454"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Psychiatry Social Work",
-    "call": ["5546", "5547", "4450"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Reflections & Psych Counselor",
-    "call": ["5562", "5790"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Exec. Receptionist (Sara Khan)",
-    "call": ["5408"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "MedSys Transportation",
-    "call": ["7182068911"],
-    "fax": [],
-    "pager": null,
-    "notes": "Direct"
-  },
-  {
-    "category": "Other Departments",
-    "name": "Human Resources",
-    "call": ["5585"],
-    "fax": [],
-    "pager": null,
-    "notes": "OHS: 5630"
-  },
-  {
-    "category": "Other Departments",
-    "name": "OHS",
-    "call": ["5630"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Kronos",
-    "call": ["8917", "5743", "4541"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Mailroom",
-    "call": ["3103"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Pharmacy",
-    "name": "Out-Pt Pharmacy",
-    "call": ["3108"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Pt. Accounts (Jose Gomez)",
-    "call": ["5913"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Pt. Advocate (Rafael Escamilla)",
-    "call": ["5388"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Pager System",
-    "call": ["6081", "6083"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Risk Management (FHMC)",
-    "call": ["4596"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "2nd Floor Resident Room",
-    "call": ["3348"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "Blood Bank",
-    "call": ["3023", "3099", "5483"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "CDU Triage",
-    "call": ["4524"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
-    "name": "CDU",
-    "call": ["4502", "4539", "5540"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Other Departments",
+    "category": "Clinical Services",
     "name": "Dialysis",
     "call": ["5912", "5948"],
     "fax": [],
@@ -1048,7 +860,7 @@
     "notes": ""
   },
   {
-    "category": "Other Departments",
+    "category": "Clinical Services",
     "name": "EEG",
     "call": ["5294", "5680", "5921"],
     "fax": [],
@@ -1056,39 +868,323 @@
     "notes": ""
   },
   {
-    "category": "Other Departments",
-    "name": "Infection Control",
-    "call": ["3132"],
+    "category": "Clinical Services",
+    "name": "Endoscopy",
+    "call": ["5970"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
   {
-    "category": "Other Departments",
+    "category": "Clinical Services",
     "name": "Interventional Radiology",
     "call": ["5910"],
     "fax": [],
     "pager": null,
     "notes": "Dr Solomon prefers AMS: ext 8944"
   },
+
+  /* =========================
+     ED / CDU
+     ========================= */
+
   {
-    "category": "Other Departments",
-    "name": "Dr Solomon (prefers AMS)",
-    "call": ["8944"],
+    "category": "ED / CDU",
+    "name": "Emergency Room - Main",
+    "call": ["5494", "5495"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
   {
-    "category": "Other Departments",
+    "category": "ED / CDU",
+    "name": "Emergency Room",
+    "call": ["3053", "3054", "3056"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "ED / CDU",
+    "name": "CDU Triage",
+    "call": ["4524"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "ED / CDU",
+    "name": "CDU",
+    "call": ["4502", "4539", "5540"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  /* =========================
+     ICU / RESPIRATORY
+     ========================= */
+
+  {
+    "category": "ICU Services",
+    "name": "MICU",
+    "call": ["5557"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "ICU Services",
+    "name": "SICU",
+    "call": ["5558"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Respiratory",
+    "name": "Respiratory Therapy",
+    "call": ["8888"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  /* =========================
+     ADMIN / EDUCATION / OPERATIONS
+     ========================= */
+
+  {
+    "category": "Education & Residency",
+    "name": "Dr. Karen Beekman — Program Director",
+    "call": ["5218"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Administration",
+    "name": "Dr. Alessandro Solinas — Chairman",
+    "call": ["5774"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Administration",
+    "name": "Dr. Akbar Khan — Medical Director",
+    "call": ["4518"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Admitting",
+    "call": ["5435", "5436", "5437"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Amb/Surg",
+    "call": ["3029", "3181"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Behavioral Health",
+    "name": "Pysch",
+    "call": ["4414", "8844"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Nursing Dept. & Nursing Education",
+    "call": ["5577", "5840"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Clinic / Ambulatory",
+    "name": "Out-Pt Clinic",
+    "call": ["5487", "5505"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Palliative Care",
+    "name": "Palliative Fellow",
+    "call": ["3064"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Palliative Care",
+    "name": "Palliative Care Social Worker",
+    "call": ["4454"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Behavioral Health",
+    "name": "Psychiatry Social Work",
+    "call": ["5546", "5547", "4450"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Behavioral Health",
+    "name": "Reflections & Psych Counselor",
+    "call": ["5562", "5790"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Exec. Receptionist (Sara Khan)",
+    "call": ["5408"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Transportation",
+    "name": "MedSys Transportation",
+    "call": ["7182068911"],
+    "fax": [],
+    "pager": null,
+    "notes": "Direct"
+  },
+
+  {
+    "category": "Human Resources",
+    "name": "Human Resources",
+    "call": ["5585"],
+    "fax": [],
+    "pager": null,
+    "notes": "OHS: 5630"
+  },
+  {
+    "category": "Human Resources",
+    "name": "OHS",
+    "call": ["5630"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Kronos",
+    "call": ["8917", "5743", "4541"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Mailroom",
+    "call": ["3103"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Patient Services",
+    "name": "Pt. Accounts (Jose Gomez)",
+    "call": ["5913"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Patient Services",
+    "name": "Pt. Advocate (Rafael Escamilla)",
+    "call": ["5388"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "IT / Systems",
+    "name": "IT / MIS Dept.",
+    "call": ["5560", "4567"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Health Information",
+    "name": "Health Information",
+    "call": ["5425"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Hospital Operations & Support",
+    "name": "Pager System",
+    "call": ["6081", "6083"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Risk & Compliance",
+    "name": "Risk Management (FHMC)",
+    "call": ["4596"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Education & Residency",
+    "name": "2nd Floor Resident Room",
+    "call": ["3348"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Infection Prevention",
+    "name": "Infection Control",
+    "call": ["3132"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+
+  {
+    "category": "Clinical Services",
     "name": "Nutrition",
     "call": ["5400", "5401"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
+
   {
-    "category": "Other Departments",
+    "category": "Perioperative Services",
     "name": "OR",
     "call": ["3027", "5607", "5608"],
     "fax": [],
@@ -1096,7 +1192,7 @@
     "notes": ""
   },
   {
-    "category": "Other Departments",
+    "category": "Perioperative Services",
     "name": "PACU",
     "call": ["5617", "5635", "5688"],
     "fax": [],
@@ -1105,54 +1201,26 @@
   },
 
   {
-    "category": "Labs",
-    "name": "Accessioning",
-    "call": ["5481", "5482"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Labs",
-    "name": "Chemistry",
-    "call": ["5532", "5605"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Labs",
-    "name": "Hematology",
-    "call": ["5722", "3182", "4464"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Labs",
-    "name": "Microbiology",
-    "call": ["5484", "5969", "8836"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Labs",
-    "name": "Pathology",
-    "call": ["5479", "5930", "8827"],
+    "category": "Clinical Services",
+    "name": "Dr Solomon (prefers AMS)",
+    "call": ["8944"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
 
   {
-    "category": "Radiology",
-    "name": "Envision (Off-hours readings)",
-    "call": ["8885573617"],
+    "category": "Hospital Operations & Support",
+    "name": "Surgery Lounge",
+    "call": ["8923", "8924"],
     "fax": [],
     "pager": null,
-    "notes": "Direct"
+    "notes": ""
   },
+
+  /* =========================
+     MISC / TESTING
+     ========================= */
 
   {
     "category": "Testing",
