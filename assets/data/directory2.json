@@ -136,11 +136,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     RADIOLOGY
-     ========================= */
-
   {
     "category": "Radiology — Providers (Onsite)",
     "name": "Dr Arnuk",
@@ -737,11 +732,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     PAGERS
-     ========================= */
-
   {
     "category": "Pagers",
     "name": "ABG Drop-off Sample",
