@@ -1,8 +1,4 @@
 [
-  /* =========================
-     NURSING UNITS & STATIONS
-     ========================= */
-
   {
     "category": "Nursing Units & Stations — 4N",
     "name": "4N Residents Documentation Room",
@@ -323,11 +319,6 @@
     "pager": null,
     "notes": "Direct"
   },
-
-  /* =========================
-     CARDIOLOGY
-     ========================= */
-
   {
     "category": "Cardiology",
     "name": "EKG",
@@ -336,11 +327,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     LABORATORY SERVICES
-     ========================= */
-
   {
     "category": "Laboratory Services",
     "name": "Accessioning",
@@ -389,11 +375,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     PHARMACY
-     ========================= */
-
   {
     "category": "Pharmacy",
     "name": "MICU (Sameul Hart)",
@@ -418,11 +399,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     CASE MANAGEMENT / CMA / SOCIAL WORK
-     ========================= */
-
   {
     "category": "Leadership & CMA’s",
     "name": "Sonia McNeil — Director",
@@ -838,11 +814,6 @@
     "pager": "74703",
     "notes": ""
   },
-
-  /* =========================
-     CLINICAL SERVICES
-     ========================= */
-
   {
     "category": "Clinical Services",
     "name": "Vascular Lab (Appointments)",
@@ -883,11 +854,6 @@
     "pager": null,
     "notes": "Dr Solomon prefers AMS: ext 8944"
   },
-
-  /* =========================
-     ED / CDU
-     ========================= */
-
   {
     "category": "ED / CDU",
     "name": "Emergency Room - Main",
@@ -920,11 +886,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     ICU / RESPIRATORY
-     ========================= */
-
   {
     "category": "ICU Services",
     "name": "MICU",
@@ -949,11 +910,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     ADMIN / EDUCATION / OPERATIONS
-     ========================= */
-
   {
     "category": "Education & Residency",
     "name": "Dr. Karen Beekman — Program Director",
@@ -1217,11 +1173,6 @@
     "pager": null,
     "notes": ""
   },
-
-  /* =========================
-     MISC / TESTING
-     ========================= */
-
   {
     "category": "Testing",
     "name": "Testing",
