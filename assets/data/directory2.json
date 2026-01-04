@@ -1088,7 +1088,7 @@
   {
     "category": "Hospital Operations & Support",
     "name": "Pager System",
-    "call": ["6081", "6083"],
+    "call": ["6081"],
     "fax": [],
     "pager": null,
     "notes": ""
