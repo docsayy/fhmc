@@ -138,23 +138,31 @@
   },
   {
     "category": "Radiology — Providers (Onsite)",
-    "name": "Dr Arnuk",
+    "name": "Dr Omar Arnuk",
     "call": ["7182066955"],
     "fax": [],
     "pager": null,
-    "notes": "Onsite"
+    "notes": "Onsite | Neuroradiologist"
   },
   {
     "category": "Radiology — Providers (Onsite)",
-    "name": "Dr Serras",
+    "name": "Dr Spencer Serras",
     "call": ["7182067753"],
     "fax": [],
     "pager": null,
-    "notes": "Onsite (ext 7753)"
+    "notes": "Onsite | Neuroradiologist"
+  },
+    {
+    "category": "Radiology — Providers (Onsite)",
+    "name": "Dr Jai Choi",
+    "call": ["7186703116"],
+    "fax": [],
+    "pager": null,
+    "notes": "Onsite | Neuroradiologist"
   },
   {
     "category": "Radiology — Providers (Onsite)",
-    "name": "Dr Yoeli",
+    "name": "Dr Gideon Yoeli",
     "call": ["7182068790"],
     "fax": [],
     "pager": null,
@@ -162,7 +170,7 @@
   },
   {
     "category": "Radiology — Providers (Onsite)",
-    "name": "Dr Lee",
+    "name": "Dr Godwin Lee",
     "call": ["7186703095"],
     "fax": [],
     "pager": null,
@@ -202,6 +210,14 @@
     "notes": "Remote"
   },
   {
+    "category": "Radiology — Providers (Onsite)",
+    "name": "Dr William Chiu",
+    "call": ["7182066147"],
+    "fax": [],
+    "pager": null,
+    "notes": "Onsite"
+  },
+  {
     "category": "Radiology — Providers (Remote)",
     "name": "Dr Gordon",
     "call": ["8457095697"],
@@ -235,8 +251,8 @@
   },
   {
     "category": "Radiology — Providers (Remote)",
-    "name": "Dr Chiu",
-    "call": ["7182066147"],
+    "name": "Dr William Chiu",
+    "call": ["7184241737"],
     "fax": [],
     "pager": null,
     "notes": "Remote"
