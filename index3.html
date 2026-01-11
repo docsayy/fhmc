@@ -144,7 +144,7 @@ body{
 </main>
 
 <footer class="footer">
-  <div class="wrap">Tip: try “4N”, “radiology”, or an extension.</div>
+  <div class="wrap">Make everyday work a little easier — Moh Sayyar, MD</div>
 </footer>
 
 <script>
@@ -226,7 +226,7 @@ body{
 
   async function load(){
     try{
-      const res = await fetch("./assets/directory.json",{cache:"no-store"});
+      const res = await fetch("./assets/directory2.json",{cache:"no-store"});
       const data = await res.json();
       const enriched = data.map(e=>({...e,__h:haystack(e)}));
 
