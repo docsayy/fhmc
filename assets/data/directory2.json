@@ -112,14 +112,6 @@
     "notes": ""
   },
   {
-    "category": "",
-    "name": "3 WEST",
-    "call": ["5554", "5556"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
     "category": "Nursing Station",
     "name": "4 WEST (PED)",
     "call": ["5526"],
@@ -147,14 +139,6 @@
     "category": "Nursing Station",
     "name": "Newborn Nursery / NICU",
     "call": ["5386", "5363"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Station",
-    "name": "Transitional Care Unit (TCU)",
-    "call": ["5554", "5200"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -419,8 +403,24 @@
   },
   {
     "category": "Pharmacy",
-    "name": "MICU (Sameul Hart)",
+    "name": "MICU (Sameul)",
     "call": ["4471"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Pharmacy",
+    "name": "2N (Jennifer)",
+    "call": ["4471"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Pharmacy",
+    "name": "ID",
+    "call": ["5073"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -435,7 +435,7 @@
   },
   {
     "category": "Pharmacy",
-    "name": "Out-Pt Pharmacy",
+    "name": "Out-Pt Pharmacy - Flushing Rx",
     "call": ["3108"],
     "fax": [],
     "pager": null,
