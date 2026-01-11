@@ -110,7 +110,7 @@
 
   async function loadDirectory() {
     try {
-      const res = await fetch("./assets/directory.json", { cache: "no-store" });
+      const res = await fetch("./assets/directory2.json", { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       if (!Array.isArray(data)) throw new Error("directory.json must be a JSON array");
