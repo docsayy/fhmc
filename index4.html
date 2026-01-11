@@ -269,7 +269,7 @@ footer{
 
   async function load(){
     try{
-      const res = await fetch("directory2.json", { cache:"no-store" });
+      const res = await fetch("./assets/data/directory2.json", { cache:"no-store" });
       if(!res.ok) throw new Error("HTTP " + res.status);
 
       const data = await res.json();
