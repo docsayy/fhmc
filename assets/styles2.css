@@ -75,3 +75,106 @@ body{
   color: var(--muted);
   padding-bottom: 12px;
 }
+
+.content{
+  padding: 14px 0 40px;
+}
+
+.section{
+  margin: 14px 0 22px;
+}
+
+.section-title{
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 12px;
+}
+
+.card{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  padding: 12px;
+}
+
+.row{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.name{
+  font-size: 16px;
+}
+
+.notes{
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.line{
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.label{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip{
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--chip);
+  color: var(--chipText);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.chip-passive{
+  cursor: default;
+}
+
+.pager{
+  font-size: 13px;
+  color: var(--text);
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.empty{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  color: var(--muted);
+}
+
+.footer{
+  border-top: 1px solid var(--border);
+  padding: 14px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
