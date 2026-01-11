@@ -1,31 +1,86 @@
 [
   {
-    "category": "Nursing Units & Stations — 4N",
-    "name": "4N Residents Documentation Room",
+    "category": "Residents Room",
+    "name": "4N - Documentation Room",
     "call": ["8003", "6074", "8735", "8741"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
+    {
+    "category": "Residents Room",
+    "name": "SICU",
+    "call": ["5558"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+      {
+    "category": "Residents Room",
+    "name": "3W - Documentation Room",
+    "call": ["5646", "4475", "3168"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Residents Room",
+    "name": "2N1 - Documentation Room",
+    "call": ["4511", "8727", "4512", "6072"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+      {
+    "category": "Residents extension",
+    "name": "MICU",
+    "call": ["5730", "3385"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+        {
+    "category": "Residents extension",
+    "name": "CCU",
+    "call": ["8907"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+        {
+    "category": "Residents Room",
+    "name": "2N2 / Tele - Documentation Room",
+    "call": ["8883", "5855", "8726", "8732", "5661"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
   {
-    "category": "Nursing Units & Stations — 4N",
-    "name": "4N1 Nursing Station",
+    "category": "Nursing Station",
+    "name": "4N1",
     "call": ["5706", "5707", "5708"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
-  {
-    "category": "Nursing Units & Stations — 4N",
-    "name": "4N2 Nursing Station",
-    "call": ["8285", "5552", "5553"],
+    {
+    "category": "Nursing Station",
+    "name": "3W",
+    "call": ["8277", "5554"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
-
   {
-    "category": "Nursing Units & Stations",
+    "category": "Nursing Station",
+    "name": "4N2",
+    "call": ["5552", "5553", "8285"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Station",
     "name": "2N1",
     "call": ["5536", "5537"],
     "fax": [],
@@ -33,47 +88,31 @@
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
-    "name": "2N2",
-    "call": ["5550", "5551"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Units & Stations",
-    "name": "2 WEST (CDU)",
-    "call": ["5693", "5694", "5078"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Units & Stations",
-    "name": "3N1 (Psych)",
-    "call": ["5547", "5509"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Units & Stations",
-    "name": "TELE",
+    "category": "Nursing Station",
+    "name": "2N2 - Tele",
     "call": ["5544", "5545"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
-    "name": "3 EAST (ICU’s)",
-    "call": ["5559"],
+    "category": "Nursing Station",
+    "name": "2 WEST (CDU)",
+    "call": ["5693", "5694", "5078"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Nursing Station",
+    "name": "3 EAST - MICU",
+    "call": ["5557", "5727", "5906", "5657"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
+    "category": "",
     "name": "3 WEST",
     "call": ["5554", "5556"],
     "fax": [],
@@ -81,23 +120,7 @@
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations — 4N",
-    "name": "4N1",
-    "call": ["5707", "5706"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Units & Stations — 4N",
-    "name": "4N2",
-    "call": ["5552", "5553"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Units & Stations",
+    "category": "Nursing Station",
     "name": "4 WEST (PED)",
     "call": ["5526"],
     "fax": [],
@@ -105,7 +128,7 @@
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
+    "category": "Nursing Station",
     "name": "5 EAST — OB/GYN, Medical, Ped Clinic",
     "call": ["8989", "5488", "3149"],
     "fax": [],
@@ -113,7 +136,7 @@
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
+    "category": "Nursing Station",
     "name": "5 WEST",
     "call": ["5548", "5549"],
     "fax": [],
@@ -121,7 +144,7 @@
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
+    "category": "Nursing Station",
     "name": "Newborn Nursery / NICU",
     "call": ["5386", "5363"],
     "fax": [],
@@ -129,7 +152,7 @@
     "notes": ""
   },
   {
-    "category": "Nursing Units & Stations",
+    "category": "Nursing Station",
     "name": "Transitional Care Unit (TCU)",
     "call": ["5554", "5200"],
     "fax": [],
@@ -334,6 +357,14 @@
     "category": "Cardiology",
     "name": "EKG",
     "call": ["5361"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+    {
+    "category": "Cardiology",
+    "name": "Cardiac lab",
+    "call": ["3189", "5489", "5648"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -753,72 +784,96 @@
     "name": "ABG Drop-off Sample",
     "call": [],
     "fax": [],
-    "pager": "74705",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 74705"
   },
   {
     "category": "Pagers",
     "name": "OB/GYN",
     "call": [],
     "fax": [],
-    "pager": "74440",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 74440"
   },
   {
     "category": "Pagers",
     "name": "Ophthalmology",
     "call": [],
     "fax": [],
-    "pager": "12344",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 12344"
   },
   {
     "category": "Pagers",
     "name": "Ortho",
     "call": [],
     "fax": [],
-    "pager": "74051",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 74051"
   },
   {
     "category": "Pagers",
     "name": "Podiatry",
     "call": [],
     "fax": [],
-    "pager": "10022",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 10022"
   },
   {
     "category": "Pagers",
     "name": "Psych (After 4PM)",
     "call": [],
     "fax": [],
-    "pager": "10163",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 10163"
   },
   {
     "category": "Pagers",
     "name": "Surgery (New Consult)",
     "call": [],
     "fax": [],
-    "pager": "74494",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 74494"
   },
   {
     "category": "Pagers",
     "name": "Surgery (Follow-up)",
     "call": [],
     "fax": [],
-    "pager": "74111",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 74111"
   },
   {
     "category": "Pagers",
-    "name": "Respiratory Therapy",
+    "name": "Respiratory Therapy - ICU",
     "call": [],
     "fax": [],
-    "pager": "74703",
-    "notes": ""
+    "pager": "",
+    "notes": "Page 74701"
+  },
+    {
+    "category": "Pagers",
+    "name": "Respiratory Therapy - 2N",
+    "call": [],
+    "fax": [],
+    "pager": "",
+    "notes": "Page 74702"
+  },
+    {
+    "category": "Pagers",
+    "name": "Respiratory Therapy - 4N",
+    "call": [],
+    "fax": [],
+    "pager": "",
+    "notes": "Page 74710"
+  },
+      {
+    "category": "Pagers",
+    "name": "Respiratory Therapy - ABG / Tele / 3W",
+    "call": [],
+    "fax": [],
+    "pager": "",
+    "notes": "Page 74705"
   },
   {
     "category": "Clinical Services",
@@ -892,22 +947,7 @@
     "pager": null,
     "notes": ""
   },
-  {
-    "category": "ICU Services",
-    "name": "MICU",
-    "call": ["5557"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "ICU Services",
-    "name": "SICU",
-    "call": ["5558"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
+
   {
     "category": "Respiratory",
     "name": "Respiratory Therapy",
@@ -917,7 +957,7 @@
     "notes": ""
   },
   {
-    "category": "Education & Residency",
+    "category": "Administration",
     "name": "Dr. Karen Beekman — Program Director",
     "call": ["5218"],
     "fax": [],
@@ -940,9 +980,24 @@
     "pager": null,
     "notes": ""
   },
-
+{
+    "category": "Ops & Support",
+    "name": "Cafeteria",
+    "call": ["5400", "5401"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
+    "name": "Dental Clinic",
+    "call": ["5521", "5522"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Ops & Support",
     "name": "Admitting",
     "call": ["5435", "5436", "5437"],
     "fax": [],
@@ -950,7 +1005,7 @@
     "notes": ""
   },
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Amb/Surg",
     "call": ["3029", "3181"],
     "fax": [],
@@ -966,7 +1021,7 @@
     "notes": ""
   },
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Nursing Dept. & Nursing Education",
     "call": ["5577", "5840"],
     "fax": [],
@@ -1017,7 +1072,7 @@
   },
 
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Exec. Receptionist (Sara Khan)",
     "call": ["5408"],
     "fax": [],
@@ -1051,7 +1106,7 @@
   },
 
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Kronos",
     "call": ["8917", "5743", "4541"],
     "fax": [],
@@ -1059,7 +1114,7 @@
     "notes": ""
   },
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Mailroom",
     "call": ["3103"],
     "fax": [],
@@ -1102,7 +1157,7 @@
   },
 
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Pager System",
     "call": ["6081"],
     "fax": [],
@@ -1119,8 +1174,8 @@
   },
 
   {
-    "category": "Education & Residency",
-    "name": "2nd Floor Resident Room",
+    "category": "Residents Room",
+    "name": "2N - Documentation Room",
     "call": ["3348"],
     "fax": [],
     "pager": null,
@@ -1172,19 +1227,11 @@
   },
 
   {
-    "category": "Hospital Operations & Support",
+    "category": "Ops & Support",
     "name": "Surgery Lounge",
     "call": ["8923", "8924"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
-  {
-    "category": "Testing",
-    "name": "Testing",
-    "call": [],
-    "fax": [],
-    "pager": "11170",
-    "notes": ""
-  }
 ]
