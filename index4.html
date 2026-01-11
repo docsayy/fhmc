@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>FHMC Directory</title>
 
 <style>
@@ -129,7 +129,6 @@ footer{
   color:var(--muted);
 }
 
-/* Mobile: stack */
 @media (max-width: 820px){
   .row{grid-template-columns:1fr;gap:6px;}
   .cell.muted{font-size:13px;}
@@ -144,7 +143,7 @@ footer{
     <div class="subtitle">Search extensions and pagers</div>
 
     <div class="controls">
-      <input id="search" class="search" placeholder="Search name, category, extension…">
+      <input id="search" class="search" placeholder="Search name, category, extension…" />
       <button id="clear" class="btn">Clear</button>
     </div>
 
@@ -169,9 +168,9 @@ footer{
   const search = document.getElementById("search");
   const clearBtn = document.getElementById("clear");
 
-  // IMPORTANT: set this to the hospital main line you want extensions to route through (10 digits).
-  // Example: "7186708000"
-  const HOSPITAL_MAIN_10_DIGITS = "7186700000"; // <-- CHANGE THIS
+  // FHMC mapping: 4-digit extensions become 718-670-XXXX
+  // tel:+1718670XXXX
+  const FHMC_PREFIX = "1718670"; // +1 718 670
 
   const norm = v => String(v ?? "").toLowerCase().trim();
   const digits = v => String(v ?? "").replace(/\D+/g,"");
@@ -186,23 +185,18 @@ footer{
   }
 
   // Build tel: link
+  // - 4 digits -> tel:+1718670XXXX
   // - 10 digits -> tel:+1XXXXXXXXXX
-  // - 3-5 digits -> tel:+1<main>,,<ext>  (commas are pauses so ext is sent after main line answers)
-  function telHref(value){
-    const d = digits(value);
-    const main = digits(HOSPITAL_MAIN_10_DIGITS);
+  // - 11 digits starting with 1 -> tel:+1XXXXXXXXXX
+  function telFromCallValue(c){
+    const d = digits(c);
 
-    // Extensions: 3-5 digits (you can widen if needed)
-    if (d.length >= 3 && d.length <= 5) {
-      if (main.length === 10) return `tel:+1${main},,${d}`;
-      return `tel:${d}`; // fallback if main not set
-    }
-
-    // Full US number
+    if (d.length === 4) return `tel:+${FHMC_PREFIX}${d}`;
     if (d.length === 10) return `tel:+1${d}`;
+    if (d.length === 11 && d.startsWith("1")) return `tel:+${d}`;
 
-    // Fallback (still tries something)
-    return `tel:${d || String(value ?? "").trim()}`;
+    // fallback (still tries)
+    return `tel:${d || String(c ?? "").trim()}`;
   }
 
   function buildHaystack(e){
@@ -220,11 +214,11 @@ footer{
   }
 
   function pagerValue(e){
-    // Prefer explicit pager field (e.pager = "74705")
+    // Prefer explicit pager field
     const p = String(e.pager ?? "").trim();
     if (p) return p;
 
-    // If pager was stuffed into notes like "Page 74705", extract digits.
+    // If someone wrote "Page 74705" in notes, extract it
     const n = String(e.notes ?? "");
     const m = n.match(/page\s*([0-9]{3,8})/i);
     return m ? m[1] : "";
@@ -236,7 +230,6 @@ footer{
       return;
     }
 
-    // group by category in insertion order
     const groups = new Map();
     for(const e of list){
       const cat = normalizeCategory(e.category);
@@ -257,7 +250,7 @@ footer{
         const faxes = Array.isArray(e.fax) ? e.fax : [];
         const pager = pagerValue(e);
 
-        // If notes is only a pager note (e.g., "Page 74705"), hide it to avoid duplicate noise
+        // Hide notes if it's just "Page ####" to avoid duplicate clutter
         const notesIsJustPager = /^page\s*\d+$/i.test(notesRaw);
         const notes = (!notesIsJustPager && notesRaw) ? notesRaw : "";
 
@@ -268,7 +261,7 @@ footer{
           for(const c of calls){
             const label = String(c ?? "").trim();
             if(!label) continue;
-            actions += ` <a class="chip" href="${telHref(label)}">${escapeHtml(label)}</a>`;
+            actions += ` <a class="chip" href="${telFromCallValue(label)}">${escapeHtml(label)}</a>`;
           }
         }
 
@@ -307,18 +300,18 @@ footer{
       if(!Array.isArray(data)) throw new Error("directory.json must be a JSON array");
 
       const enriched = data.map(e => ({...e, _h:buildHaystack(e)}));
-      status.textContent = "Loaded " + enriched.length + " entries";
+      status.textContent = `Loaded ${enriched.length} entries`;
       render(enriched);
 
       function runSearch(){
         const q = norm(search.value);
         if(!q){
-          status.textContent = "Loaded " + enriched.length + " entries";
+          status.textContent = `Loaded ${enriched.length} entries`;
           render(enriched);
           return;
         }
         const filtered = enriched.filter(e => e._h.includes(q));
-        status.textContent = "Showing " + filtered.length + " results";
+        status.textContent = `Showing ${filtered.length} results`;
         render(filtered);
       }
 
