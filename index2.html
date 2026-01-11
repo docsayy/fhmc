@@ -6,26 +6,31 @@
   <title>FHMC Directory</title>
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
-<body class="page">
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="title">FHMC Directory</div>
+      <div class="subtitle">Search extensions and pagers</div>
 
-<header class="topbar">
-  <div class="topbar__controls">
-    <input id="search" type="search" placeholder="Search name, category, extension, pager..." />
-  </div>
-</header>
+      <div class="controls">
+        <input id="search" class="search" type="search" placeholder="Search name, category, extension, notes…" autocomplete="off" />
+        <button id="clear" class="btn" type="button">Clear</button>
+      </div>
 
-<main class="container">
-  <div id="status" class="status muted">Loading…</div>
-  <div id="content"></div>
-</main>
+      <div id="status" class="status">Loading…</div>
+    </div>
+  </header>
 
-<footer class="footer">
-  <p class="credits">Make everyday work a little easier — Moh Sayyar, MD</p>
-</footer>
+  <main class="wrap">
+    <div id="content" class="content"></div>
+  </main>
 
-<div id="toast" class="toast" aria-live="polite"></div>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footnote">Tip: type “4N”, “radiology”, “lab”, or an extension.</div>
+    </div>
+  </footer>
 
-<script src="./assets/paging.js"></script>
-<script src="./assets/app2.js"></script>
+  <script src="./assets/app.js" defer></script>
 </body>
 </html>
