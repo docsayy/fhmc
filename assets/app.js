@@ -3,7 +3,7 @@
   const status = document.getElementById("status");
   const search = document.getElementById("search");
 
-  const data = await (await fetch("./assets/data/directory.json")).json();
+  const data = await (await fetch("./assets/data/directory2.json")).json();
   status.textContent = `Loaded ${data.length} entries`;
 
   function render(filter = "") {
