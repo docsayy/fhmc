@@ -161,7 +161,7 @@ footer{
 
 <footer>
   <div class="wrap">
-    Tip: Try “4N”, “radiology”, “lab”, or an extension.
+    Make everyday work a little easier — Moh Sayyar, MD
   </div>
 </footer>
 
@@ -269,7 +269,7 @@ footer{
 
   async function load(){
     try{
-      const res = await fetch("directory.json", { cache:"no-store" });
+      const res = await fetch("directory2.json", { cache:"no-store" });
       if(!res.ok) throw new Error("HTTP " + res.status);
 
       const data = await res.json();
