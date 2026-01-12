@@ -1,38 +1,46 @@
 [
   {
-    "category": "Residents Room",
-    "name": "4N - Documentation Room",
-    "call": ["8003", "6074", "8735", "8741"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-    {
-    "category": "Residents Room",
-    "name": "SICU",
-    "call": ["5558"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-      {
-    "category": "Residents Room",
-    "name": "3W - Documentation Room",
-    "call": ["5646", "4475", "3168"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-    {
-    "category": "Residents Room",
+    "category": "Residents",
     "name": "2N1 - Documentation Room",
     "call": ["4511", "8727", "4512", "6072"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
-      {
-    "category": "Residents extension",
+  {
+    "category": "Residents",
+    "name": "2N2 / Tele - Documentation Room",
+    "call": ["8883", "5855", "8726", "8732", "5661"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Residents",
+    "name": "3W - Documentation Room",
+    "call": ["5646", "4475", "3168"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Residents",
+    "name": "4N - Documentation Room",
+    "call": ["8003", "6074", "8735", "8741"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Residents",
+    "name": "SICU",
+    "call": ["5558"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Residents",
     "name": "MICU",
     "call": ["5730", "3385"],
     "fax": [],
@@ -40,17 +48,9 @@
     "notes": ""
   },
         {
-    "category": "Residents extension",
+    "category": "Residents",
     "name": "CCU",
     "call": ["8907"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-        {
-    "category": "Residents Room",
-    "name": "2N2 / Tele - Documentation Room",
-    "call": ["8883", "5855", "8726", "8732", "5661"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -63,7 +63,8 @@
     "pager": null,
     "notes": ""
   },
-    {
+  
+  {
     "category": "Nursing Station",
     "name": "3W",
     "call": ["8277", "5554"],
@@ -1174,7 +1175,7 @@
   },
 
   {
-    "category": "Residents Room",
+    "category": "Residents",
     "name": "2N - Documentation Room",
     "call": ["3348"],
     "fax": [],
