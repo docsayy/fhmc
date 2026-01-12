@@ -148,7 +148,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Omar Arnuk",
     "call": ["7182066955"],
     "fax": [],
@@ -156,7 +156,7 @@
     "notes": "Onsite | Neuroradiologist"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Spencer Serras",
     "call": ["7182067753"],
     "fax": [],
@@ -164,7 +164,7 @@
     "notes": "Onsite | Neuroradiologist"
   },
     {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Jai Choi",
     "call": ["7186703116"],
     "fax": [],
@@ -172,7 +172,7 @@
     "notes": "Onsite | Neuroradiologist"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Gideon Yoeli",
     "call": ["7182068790"],
     "fax": [],
@@ -180,7 +180,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Godwin Lee",
     "call": ["7186703095"],
     "fax": [],
@@ -188,7 +188,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Premkumar",
     "call": ["7186708942"],
     "fax": [],
@@ -196,7 +196,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Friedman",
     "call": ["7186708944"],
     "fax": [],
@@ -204,7 +204,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr Gordon",
     "call": ["7186708943"],
     "fax": [],
@@ -213,7 +213,7 @@
   },
 
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Huang",
     "call": ["5166628623"],
     "fax": [],
@@ -221,7 +221,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Onsite)",
+    "category": "Radiologist",
     "name": "Dr William Chiu",
     "call": ["7182066147"],
     "fax": [],
@@ -229,7 +229,7 @@
     "notes": "Onsite"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Gordon",
     "call": ["8457095697"],
     "fax": [],
@@ -237,7 +237,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Zaveri",
     "call": ["9178813016"],
     "fax": [],
@@ -245,7 +245,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Janczuk",
     "call": ["9174069432"],
     "fax": [],
@@ -253,7 +253,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Leung",
     "call": ["9178559298"],
     "fax": [],
@@ -261,7 +261,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr William Chiu",
     "call": ["7184241737"],
     "fax": [],
@@ -269,7 +269,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Al-Husayni",
     "call": ["7182067751"],
     "fax": [],
@@ -277,7 +277,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Sahai",
     "call": ["7182066111"],
     "fax": [],
@@ -285,7 +285,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Patel",
     "call": ["9179724311"],
     "fax": [],
@@ -293,7 +293,7 @@
     "notes": "Remote"
   },
   {
-    "category": "Radiology — Providers (Remote)",
+    "category": "Radiologist",
     "name": "Dr Yoeli",
     "call": ["9142616807"],
     "fax": [],
@@ -302,7 +302,7 @@
   },
 
   {
-    "category": "Radiology — Modalities & Operations",
+    "category": "Radiology",
     "name": "Radiology (Main)",
     "call": ["5448"],
     "fax": [],
@@ -310,7 +310,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology — Modalities & Operations",
+    "category": "Radiology",
     "name": "X-Ray",
     "call": ["5447"],
     "fax": [],
@@ -318,7 +318,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology — Modalities & Operations",
+    "category": "Radiology",
     "name": "CT",
     "call": ["5784"],
     "fax": [],
@@ -326,7 +326,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology — Modalities & Operations",
+    "category": "Radiology",
     "name": "Nuclear Medicine",
     "call": ["5902"],
     "fax": [],
@@ -334,7 +334,7 @@
     "notes": ""
   },
   {
-    "category": "Radiology — Operations (After Hours)",
+    "category": "Radiology",
     "name": "Envision (Off-hours readings)",
     "call": ["8885573617"],
     "fax": [],
@@ -446,7 +446,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Sonia McNeil — Director",
     "call": ["8865"],
     "fax": ["4537"],
@@ -454,15 +454,15 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
-    "name": "Roxanne Campbell — Case Manager Supervisor",
+    "category": "CM & SW Leadership",
+    "name": "Roxanne Campbell — 4N Case Manager Supervisor",
     "call": ["7183216139"],
     "fax": ["4437"],
     "pager": null,
     "notes": "Direct"
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Roy Naipaul — Social Work Supervisor",
     "call": ["5606"],
     "fax": ["4437"],
@@ -470,7 +470,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Samantha Gibson — Office Manager",
     "call": ["4517"],
     "fax": ["4537"],
@@ -478,7 +478,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Leann Bugran — CMA Team Lead",
     "call": ["3032"],
     "fax": ["4437"],
@@ -486,7 +486,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Jason Abas — CMA CM Assistant",
     "call": ["5380"],
     "fax": ["4537"],
@@ -494,7 +494,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Haifa Bisraj — CMA CM Assistant",
     "call": ["3006"],
     "fax": ["4437"],
@@ -502,7 +502,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Laura Deliz — CMA CM Assistant",
     "call": ["5380"],
     "fax": ["4437"],
@@ -510,7 +510,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Sharon Imran — CMA CM Assistant",
     "call": ["4448"],
     "fax": ["4437"],
@@ -518,7 +518,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Tatiana Olave-Alvarez — CMA CM Assistant",
     "call": ["5380"],
     "fax": ["4437"],
@@ -526,7 +526,7 @@
     "notes": ""
   },
   {
-    "category": "Leadership & CMA’s",
+    "category": "CM & SW Leadership",
     "name": "Josselyn Flores Velasquez — Patient Navigator",
     "call": ["5380"],
     "fax": ["4437"],
@@ -563,6 +563,30 @@
     "name": "AnnRose Calixte — Case Manager (2N)",
     "call": ["5512"],
     "fax": ["4578"],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Case Managers",
+    "name": "Raj Gupta — Case Manager (4N 422 - 433)",
+    "call": ["5093"],
+    "fax": ["4547"],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Case Managers",
+    "name": "Diane MacWithey — Case Manager (4N 434 - 445)",
+    "call": ["3026"],
+    "fax": ["4547"],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Case Managers",
+    "name": "Jihee Kim — Case Manager (4N 446 - 455)",
+    "call": ["5084"],
+    "fax": ["4547"],
     "pager": null,
     "notes": ""
   },
@@ -619,30 +643,6 @@
     "name": "CMSW FLOAT — Case Manager (3W, Hospice & TCU)",
     "call": ["3097"],
     "fax": ["4578"],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Case Managers",
-    "name": "Raj Gupta — Case Manager (4N)",
-    "call": ["5093"],
-    "fax": ["4547"],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Case Managers",
-    "name": "Diane MacWithey — Case Manager (4N)",
-    "call": ["3026"],
-    "fax": ["4547"],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Case Managers",
-    "name": "Jihee Kim — Case Manager (4N)",
-    "call": ["5084"],
-    "fax": ["4547"],
     "pager": null,
     "notes": ""
   },
