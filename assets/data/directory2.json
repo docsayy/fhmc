@@ -47,7 +47,7 @@
     "pager": null,
     "notes": ""
   },
-        {
+  {
     "category": "Residents",
     "name": "CCU",
     "call": ["8907"],
@@ -55,31 +55,10 @@
     "pager": null,
     "notes": ""
   },
-  {
-    "category": "Nursing Station",
-    "name": "4N1",
-    "call": ["5706", "5707", "5708"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  
-  {
-    "category": "Nursing Station",
-    "name": "3W",
-    "call": ["8277", "5554"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Station",
-    "name": "4N2",
-    "call": ["5552", "5553", "8285"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
+
+
+
+
   {
     "category": "Nursing Station",
     "name": "2N1",
@@ -98,13 +77,29 @@
   },
   {
     "category": "Nursing Station",
-    "name": "2 WEST (CDU)",
-    "call": ["5693", "5694", "5078"],
+    "name": "3W",
+    "call": ["8277", "5554"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
-    {
+  {
+    "category": "Nursing Station",
+    "name": "4N1",
+    "call": ["5706", "5707", "5708"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Station",
+    "name": "4N2",
+    "call": ["5552", "5553", "8285"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
     "category": "Nursing Station",
     "name": "3 EAST - MICU",
     "call": ["5557", "5727", "5906", "5657"],
@@ -114,16 +109,24 @@
   },
   {
     "category": "Nursing Station",
-    "name": "4 WEST (PED)",
-    "call": ["5526"],
+    "name": "3 EAST - CCU",
+    "call": ["5559"],
     "fax": [],
     "pager": null,
     "notes": ""
   },
   {
     "category": "Nursing Station",
-    "name": "5 EAST — OB/GYN, Medical, Ped Clinic",
-    "call": ["8989", "5488", "3149"],
+    "name": "2 WEST (CDU)",
+    "call": ["5693", "5694", "5078"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Nursing Station",
+    "name": "4 WEST (PED)",
+    "call": ["5526"],
     "fax": [],
     "pager": null,
     "notes": ""
