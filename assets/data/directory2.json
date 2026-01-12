@@ -920,6 +920,14 @@
     "notes": "Dr Solomon prefers AMS: ext 8944"
   },
   {
+    "category": "Clinical Services",
+    "name": "Respiratory Therapy",
+    "call": ["8888"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
     "category": "ED / CDU",
     "name": "Emergency Room - Main",
     "call": ["5494", "5495"],
@@ -951,11 +959,10 @@
     "pager": null,
     "notes": ""
   },
-
   {
-    "category": "Respiratory",
-    "name": "Respiratory Therapy",
-    "call": ["8888"],
+    "category": "Administration",
+    "name": "Dr. Alessandro Solinas — Chairman",
+    "call": ["5774"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -970,32 +977,8 @@
   },
   {
     "category": "Administration",
-    "name": "Dr. Alessandro Solinas — Chairman",
-    "call": ["5774"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Administration",
     "name": "Dr. Akbar Khan — Medical Director",
     "call": ["4518"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-{
-    "category": "Ops & Support",
-    "name": "Cafeteria",
-    "call": ["5400", "5401"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Ops & Support",
-    "name": "Dental Clinic",
-    "call": ["5521", "5522"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -1010,8 +993,8 @@
   },
   {
     "category": "Ops & Support",
-    "name": "Amb/Surg",
-    "call": ["3029", "3181"],
+    "name": "Cafeteria",
+    "call": ["5400", "5401"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -1026,7 +1009,7 @@
   },
   {
     "category": "Ops & Support",
-    "name": "Nursing Dept. & Nursing Education",
+    "name": "Nursing Dept.",
     "call": ["5577", "5840"],
     "fax": [],
     "pager": null,
@@ -1085,7 +1068,7 @@
   },
   {
     "category": "Transportation",
-    "name": "MedSys Transportation",
+    "name": "MediSys Transportation",
     "call": ["7182068911"],
     "fax": [],
     "pager": null,
@@ -1194,7 +1177,6 @@
     "pager": null,
     "notes": ""
   },
-
   {
     "category": "Clinical Services",
     "name": "Nutrition",
@@ -1203,7 +1185,6 @@
     "pager": null,
     "notes": ""
   },
-
   {
     "category": "Perioperative Services",
     "name": "OR",
@@ -1229,9 +1210,16 @@
     "pager": null,
     "notes": ""
   },
-
+    {
+    "category": "Clinical Services",
+    "name": "Dental Clinic",
+    "call": ["5521", "5522"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
   {
-    "category": "Ops & Support",
+    "category": "Clinical Services",
     "name": "Surgery Lounge",
     "call": ["8923", "8924"],
     "fax": [],
