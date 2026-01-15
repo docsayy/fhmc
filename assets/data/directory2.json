@@ -929,7 +929,7 @@
   },  {
     "category": "Clinical Services",
     "name": "SLP (Julie)",
-    "call": ["5479"],
+    "call": [""],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -1330,77 +1330,77 @@
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Rego Park",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Buena Vida",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Far Rockaway",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Younesi"
+  }, 
+  {
+    "category": "Nursing Home",
+    "name": "Brooklyn ACC",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Brooklyn Queens",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Horizon Care",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Queens Adult Care",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "Ocean View Care",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
+    "name": "UnionPlaza",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Younesi/ Opt Vincent Wang"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Fairview",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
   },
   {
     "category": "Nursing Home",
-    "name": "",
-    "call": [""],
-    "fax": [],
-    "notes": "Dr Younesi"
-  },
-  {
-    "category": "Nursing Home",
-    "name": "",
-    "call": [""],
-    "fax": [],
-    "notes": "Dr Younesi"
-  },
-  {
-    "category": "Nursing Home",
-    "name": "",
+    "name": "Bushwick",
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
@@ -1446,5 +1446,82 @@
     "call": [""],
     "fax": [],
     "notes": "Dr Younesi"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Elm York",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Naeem Chaudhry"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Madison York",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Naeem Chaudhry"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Cliffside",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Naeem Chaudhry"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Bridgeview",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Naeem Chaudhry / Dr Iqbal Azmat"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Queens Blvd",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Naeem Chaudhry"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Elmhurst Care",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Naeem Chaudhry"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Dr Harbor",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Vincent Rappa/ Dr Maniego"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Woodcrest",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Haider"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Long Island / LICC",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Haider / Dr Wang"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Cypress Garden",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Dave"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Sapphire Center",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Dave"
   }
 ]
