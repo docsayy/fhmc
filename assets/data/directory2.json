@@ -55,10 +55,14 @@
     "pager": null,
     "notes": ""
   },
-
-
-
-
+  {
+    "category": "Nursing Station",
+    "name": "2N1 Manager (Dave)",
+    "call": ["5203"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
   {
     "category": "Nursing Station",
     "name": "2N1",
@@ -135,14 +139,6 @@
     "category": "Nursing Station",
     "name": "5 WEST",
     "call": ["5548", "5549"],
-    "fax": [],
-    "pager": null,
-    "notes": ""
-  },
-  {
-    "category": "Nursing Station",
-    "name": "Newborn Nursery / NICU",
-    "call": ["5386", "5363"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -400,7 +396,7 @@
   {
     "category": "Laboratory Services",
     "name": "Blood Bank",
-    "call": ["3023", "3099", "5483"],
+    "call": ["5483", "3099", "3023"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -825,6 +821,14 @@
   },
   {
     "category": "Pagers",
+    "name": "ASL - American sign language",
+    "call": ["8742"],
+    "fax": [],
+    "pager": "",
+    "notes": "Page 32077 / Call 718-206-6081"
+  },
+  {
+    "category": "Pagers",
     "name": "Psych (After 4PM)",
     "call": [],
     "fax": [],
@@ -862,6 +866,14 @@
     "fax": [],
     "pager": "",
     "notes": "Page 74702"
+  }, 
+  {
+    "category": "Pagers",
+    "name": "Speach & Swallow - SLP (Julie)",
+    "call": [],
+    "fax": [],
+    "pager": "",
+    "notes": "Page 74097"
   },
     {
     "category": "Pagers",
@@ -1022,6 +1034,14 @@
     "pager": null,
     "notes": ""
   },
+    {
+    "category": "Ops & Support",
+    "name": "EPIC support",
+    "call": ["7878"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
   {
     "category": "Clinic / Ambulatory",
     "name": "Out-Pt Clinic",
@@ -1098,7 +1118,7 @@
   {
     "category": "Patient Services",
     "name": "Pt. Advocate (Rafael Escamilla)",
-    "call": ["5388"],
+    "call": ["5386"],
     "fax": [],
     "pager": null,
     "notes": ""
