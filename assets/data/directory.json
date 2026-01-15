@@ -962,5 +962,89 @@
     "call": [""],
     "fax": [],
     "notes": "212-340-4494"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "The Pavillion",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Ramzan"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "The Grand Rehab",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Ramzan"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "New Franklin",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Vela"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Hollis Park",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Vela"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "New Glin Oaks",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Vela"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Hillside Manor",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Rappa"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Ozanam Hall of Queens",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Rappa"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Chaplin Home",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Arora, Dr Holalkere, Dr Wang"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Union Plaza",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Arora, Dr Holalkere, Dr Wang"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Waterview",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Arora, Dr Jain"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Winsor",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Arora"
+  },
+  {
+    "category": "Nursing Home",
+    "name": "Cypress Garden",
+    "call": [""],
+    "fax": [],
+    "notes": "Dr Arora"
   }
 ]
