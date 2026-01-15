@@ -913,5 +913,54 @@
     "call": ["5479", "5930", "8827"],
     "fax": [],
     "notes": ""
+  },
+  {
+    "category": "Transfer Center",
+    "name": "NYP",
+    "call": [""],
+    "fax": [],
+    "notes": "800-697-7828"
+  },
+  {
+    "category": "Transfer Center",
+    "name": "Mount Sinai",
+    "call": [""],
+    "fax": [],
+    "notes": "646-605-5902"
+  },
+  {
+    "category": "Transfer Center",
+    "name": "Northwell",
+    "call": [""],
+    "fax": [],
+    "notes": "866-694-2337"
+  },
+  {
+    "category": "Transfer Center",
+    "name": "JHMC",
+    "call": [""],
+    "fax": [],
+    "notes": "718-206-7828"
+  },
+  {
+    "category": "Transfer Center",
+    "name": "Cornell Burn",
+    "call": [""],
+    "fax": [],
+    "notes": "212-746-4703"
+  },
+  {
+    "category": "Transfer Center",
+    "name": "Northshore",
+    "call": [""],
+    "fax": [],
+    "notes": "Fax 516-549-5327"
+  },
+  {
+    "category": "Other",
+    "name": "Poison Control NYC",
+    "call": [""],
+    "fax": [],
+    "notes": "212-340-4494"
   }
 ]
