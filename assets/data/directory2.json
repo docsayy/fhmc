@@ -354,7 +354,7 @@
     "notes": ""
   },
   {
-    "category": "Laboratory Services",
+    "category": "Labs Services",
     "name": "Accessioning",
     "call": ["5481", "5482"],
     "fax": [],
@@ -362,7 +362,7 @@
     "notes": ""
   },
   {
-    "category": "Laboratory Services",
+    "category": "Labs Services",
     "name": "Chemistry",
     "call": ["5532", "5605"],
     "fax": [],
@@ -370,7 +370,7 @@
     "notes": ""
   },
   {
-    "category": "Laboratory Services",
+    "category": "Labs Services",
     "name": "Hematology",
     "call": ["5722", "3182", "4464"],
     "fax": [],
@@ -378,7 +378,7 @@
     "notes": ""
   },
   {
-    "category": "Laboratory Services",
+    "category": "Labs Services",
     "name": "Microbiology",
     "call": ["5484", "5969", "8836"],
     "fax": [],
@@ -386,7 +386,7 @@
     "notes": ""
   },
   {
-    "category": "Laboratory Services",
+    "category": "Labs Services",
     "name": "Pathology",
     "call": ["5479", "5930", "8827"],
     "fax": [],
@@ -394,9 +394,17 @@
     "notes": ""
   },
   {
-    "category": "Laboratory Services",
+    "category": "Labs Services",
     "name": "Blood Bank",
     "call": ["5483", "3099", "3023"],
+    "fax": [],
+    "pager": null,
+    "notes": ""
+  },
+  {
+    "category": "Labs Services",
+    "name": "Manager (Nicole Leftenant)",
+    "call": ["5530"],
     "fax": [],
     "pager": null,
     "notes": ""
@@ -926,7 +934,7 @@
   {
     "category": "Clinical Services",
     "name": "Interventional Radiology",
-    "call": ["5910"],
+    "call": ["5190","8944"],
     "fax": [],
     "pager": null,
     "notes": "Dr Solomon prefers AMS: ext 8944"
