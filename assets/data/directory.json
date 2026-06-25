@@ -1563,9 +1563,9 @@
   {
     "category": "NY DOH",
     "name": "HIV new case reporting",
-    "call": [212-442-3388,518-474-4284],
+    "call": [],
     "fax": [],
-    "notes": "Dr Dave"
+    "notes": "212-442-3388,518-474-4284"
   },
   { "category": "Physicians", "name": "Asters", "call": ["718-208-3941"], "fax": [], "pager": null, "notes": "" },
   { "category": "Physicians", "name": "Arif", "call": ["347-549-3439", "5437"], "fax": [], "pager": null, "notes": "" },
